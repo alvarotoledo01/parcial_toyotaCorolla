@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/357528388633037718/7e8c0579b18443f1a7f627d363fb9ac0/artifacts
+deleted_time: 1747859575466
+end_time: 1747825870319
+entry_point_name: ''
+experiment_id: '357528388633037718'
+lifecycle_stage: deleted
+run_id: 7e8c0579b18443f1a7f627d363fb9ac0
+run_name: ols_model_run
+run_uuid: 7e8c0579b18443f1a7f627d363fb9ac0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747825870253
+status: 4
+tags: []
+user_id: Usuario

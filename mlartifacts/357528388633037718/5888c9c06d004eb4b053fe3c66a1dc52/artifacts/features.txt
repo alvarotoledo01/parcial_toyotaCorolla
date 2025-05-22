@@ -1,0 +1,10 @@
+const
+Age_08_04
+KM
+HP
+cc
+Doors
+Gears
+Weight
+Fuel_Type_Diesel
+Fuel_Type_Petrol

@@ -103,6 +103,23 @@ def entrenar_modelo(context, df_toyota_clean):
     plt.close(fig2)
     mlflow.log_artifact(path_resid)
 
+        # ——————————————— 9. Scatter plot para detectar outliers en cada feature ———————————————
+    for col in df_toyota_clean.columns:
+        fig, ax = plt.subplots(figsize=(6, 3))
+        ax.scatter(df_toyota_clean.index, df_toyota_clean[col], s=10, alpha=0.6)
+        ax.set_xlabel("Índice")
+        ax.set_ylabel(col)
+        ax.set_title(f"Scatter de {col} vs Índice")
+        plt.tight_layout()
+
+        img_name = f"scatter_{col}.png"
+        fig.savefig(img_name, dpi=100)
+        plt.close(fig)
+
+        # Sube cada gráfico como artifact
+        mlflow.log_artifact(img_name)
+
+
     return model
 
 

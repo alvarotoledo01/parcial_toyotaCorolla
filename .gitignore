@@ -1,0 +1,67 @@
+# -------------------------------------
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Entorno virtual
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Logs y debug
+*.log
+*.tmp
+
+# Archivos de configuración de VS Code y otros IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dagster
+dagster_home/
+dagster.yaml
+dagster-debug.log
+dagster_logs/
+
+
+# Checkpoints y modelos
+checkpoints/
+models/
+*.ckpt
+*.h5
+*.pt
+*.pkl
+*.joblib
+
+# Resultados, figuras y gráficos
+**/*.png
+outputs/
+figures/
+plots/
+
+# Archivos de datos grandes (opcional, si están generados o cacheados)
+data/
+*.csv
+*.parquet
+*.npz
+*.npy
+*.xlsx
+
+# Otros
+*.sqlite

@@ -1,0 +1,430 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  Price   R-squared:                       0.969
+Model:                            OLS   Adj. R-squared:                  0.953
+Method:                 Least Squares   F-statistic:                     59.43
+Date:                Wed, 21 May 2025   Prob (F-statistic):          5.74e-309
+Time:                        18:17:21   Log-Likelihood:                -6798.4
+No. Observations:                 861   AIC:                         1.419e+04
+Df Residuals:                     562   BIC:                         1.562e+04
+Df Model:                         298                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================================================================================
+                                                                                        coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Mfg_Month                                                                             7.0223     10.520      0.668      0.505     -13.641      27.686
+Mfg_Year                                                                           1053.2376     75.046     14.035      0.000     905.832    1200.643
+KM                                                                                   -0.0179      0.001    -13.567      0.000      -0.020      -0.015
+HP                                                                                 -232.8732    558.677     -0.417      0.677   -1330.222     864.476
+Met_Color                                                                            50.4804     77.857      0.648      0.517    -102.446     203.407
+Automatic                                                                         -3834.9102   1979.221     -1.938      0.053   -7722.485      52.665
+cc                                                                                  -10.1156     88.051     -0.115      0.909    -183.066     162.834
+Doors                                                                              1199.7406   1212.271      0.990      0.323   -1181.394    3580.876
+Cylinders                                                                         -5.109e+05   4.72e+04    -10.817      0.000   -6.04e+05   -4.18e+05
+Gears                                                                             -8418.0421   8336.010     -1.010      0.313   -2.48e+04    7955.499
+Quarterly_Tax                                                                        14.6030     11.910      1.226      0.221      -8.791      37.998
+Weight                                                                               24.5284     16.158      1.518      0.130      -7.208      56.265
+Mfr_Guarantee                                                                       218.5434     73.193      2.986      0.003      74.778     362.309
+BOVAG_Guarantee                                                                     246.3134    194.896      1.264      0.207    -136.501     629.127
+Guarantee_Period                                                                     50.1904     57.245      0.877      0.381     -62.251     162.632
+ABS                                                                                  44.9448    157.827      0.285      0.776    -265.058     354.947
+Airbag_1                                                                           -276.6911    788.336     -0.351      0.726   -1825.137    1271.754
+Airbag_2                                                                            -74.3935    166.415     -0.447      0.655    -401.265     252.478
+Airco                                                                               255.8253     93.525      2.735      0.006      72.123     439.527
+Automatic_airco                                                                    -192.7169    810.178     -0.238      0.812   -1784.064    1398.630
+Boardcomputer                                                                      -331.6431    175.267     -1.892      0.059    -675.902      12.616
+CD_Player                                                                           200.7912    103.104      1.947      0.052      -1.726     403.308
+Central_Lock                                                                        188.2101    149.659      1.258      0.209    -105.749     482.170
+Powered_Windows                                                                     113.0402    151.289      0.747      0.455    -184.120     410.201
+Power_Steering                                                                      209.0430    779.218      0.268      0.789   -1321.492    1739.578
+Radio                                                                              -384.6298   1656.869     -0.232      0.817   -3639.043    2869.783
+Mistlamps                                                                           -48.8328    207.034     -0.236      0.814    -455.489     357.823
+Sport_Model                                                                        -136.6668    105.498     -1.295      0.196    -343.885      70.552
+Backseat_Divider                                                                    -54.4743    298.517     -0.182      0.855    -640.820     531.871
+Metallic_Rim                                                                         51.8234    107.398      0.483      0.630    -159.127     262.774
+Radio_cassette                                                                      281.0380   1655.903      0.170      0.865   -2971.476    3533.552
+Tow_Bar                                                                            -127.5116     79.628     -1.601      0.110    -283.917      28.894
+Model_?TOYOTA Corolla 1.3 16V HATCHB LINEA TERRA 2/3-Doors                         1.656e-07    6.3e-08      2.628      0.009    4.18e-08    2.89e-07
+Model_?TOYOTA Corolla 1.3 16V WAGON LINEA TERRA Stationwagen                      -2.586e-07   7.54e-08     -3.428      0.001   -4.07e-07    -1.1e-07
+Model_?TOYOTA Corolla 1.3 Linea Terra liftback 4/5-Doors                           1.165e-07    1.1e-07      1.062      0.289    -9.9e-08    3.32e-07
+Model_?TOYOTA Corolla 1.4 16V VVT I 3DR 2/3-Doors                                 -5185.9195   5892.668     -0.880      0.379   -1.68e+04    6388.423
+Model_?TOYOTA Corolla 1.4 16V VVT I 3DR TERRA COMFORT 2/3-Doors                   -5237.1223   5881.011     -0.891      0.374   -1.68e+04    6314.325
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR 4/5-Doors                                 -7249.9488   5741.890     -1.263      0.207   -1.85e+04    4028.238
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR LUNA 4/5-Doors                            -6440.8401   5718.419     -1.126      0.261   -1.77e+04    4791.245
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR TERRA 4/5-Doors                           -7390.6181   5709.789     -1.294      0.196   -1.86e+04    3824.515
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR TERRA COMFORT 4/5-Doors                   -7064.1697   5712.013     -1.237      0.217   -1.83e+04    4155.332
+Model_?TOYOTA Corolla 1.4 16V VVT I HATCHB SOL 2/3-Doors                          -4193.3331   5736.718     -0.731      0.465   -1.55e+04    7074.695
+Model_?TOYOTA Corolla 1.4 16V VVT I HATCHB TERRA 2/3-Doors                        -5322.1313   5711.640     -0.932      0.352   -1.65e+04    5896.638
+Model_?TOYOTA Corolla 1.4 16V VVT I LIFTB LUNA 4/5-Doors                          -9011.2692   5752.234     -1.567      0.118   -2.03e+04    2287.235
+Model_?TOYOTA Corolla 1.4 16V VVT I LIFTB SOL 4/5-Doors                            7.422e-08   8.15e-08      0.911      0.363   -8.59e-08    2.34e-07
+Model_?TOYOTA Corolla 1.4 16V VVT I LIFTB TERRA 4/5-Doors                         -8152.8295   5696.267     -1.431      0.153   -1.93e+04    3035.745
+Model_?TOYOTA Corolla 1.4 VVTI  (Nw type) 4/5-Doors                               -8640.8025   5764.796     -1.499      0.134      -2e+04    2682.376
+Model_?TOYOTA Corolla 1.4 VVTI Linea Terra 2/3-Doors                              -6736.2151   5747.651     -1.172      0.242    -1.8e+04    4553.288
+Model_?TOYOTA Corolla 1.4-16v VVT-i Linea Terra Comfort NIEUW AIRCO 4/5-Doors     -6832.1887   6477.763     -1.055      0.292   -1.96e+04    5891.395
+Model_?TOYOTA Corolla 1.6 16V HATCHB LINEA TERRA 2/3-Doors                         -878.9590   5060.280     -0.174      0.862   -1.08e+04    9060.412
+Model_?TOYOTA Corolla 1.6 16V HATCHB S 2/3-Doors                                    581.6283   5065.319      0.115      0.909   -9367.641    1.05e+04
+Model_?TOYOTA Corolla 1.6 16V LIFTB LINEA LUNA 4/5-Doors                            1.31e-07   5.71e-08      2.296      0.022     1.9e-08    2.43e-07
+Model_?TOYOTA Corolla 1.6 16V LIFTB LINEA TERRA 4/5-Doors                          1.755e-07    7.3e-08      2.404      0.017    3.21e-08    3.19e-07
+Model_?TOYOTA Corolla 1.6 16V VVT I 3DR SOL 2/3-Doors                              1695.6788   5304.996      0.320      0.749   -8724.363    1.21e+04
+Model_?TOYOTA Corolla 1.6 16V VVT I 3DR TERRA 2/3-Doors                            1116.2421   5254.414      0.212      0.832   -9204.446    1.14e+04
+Model_?TOYOTA Corolla 1.6 16V VVT I 3DR TERRA COMFORT 2/3-Doors                    4.297e-07   7.53e-08      5.709      0.000    2.82e-07    5.78e-07
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR SOL 4/5-Doors                              -516.9006   4993.279     -0.104      0.918   -1.03e+04    9290.869
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR SOL AUT4 4/5-Doors                         4.602e-07    7.4e-08      6.219      0.000    3.15e-07    6.06e-07
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA 4/5-Doors                           -2713.0418   4992.148     -0.543      0.587   -1.25e+04    7092.506
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA AUT4 4/5-Doors                        743.3655   3326.971      0.223      0.823   -5791.452    7278.183
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA COMF AUT 4/5-Doors                   3523.6253   3334.256      1.057      0.291   -3025.500    1.01e+04
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA COMFORT 4/5-Doors                    -171.2742   5008.092     -0.034      0.973      -1e+04    9665.590
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB G6 2/3-Doors                            -468.2786   5075.376     -0.092      0.927   -1.04e+04    9500.744
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB G6 4/5-Doors                           -3385.2531   4982.688     -0.679      0.497   -1.32e+04    6401.714
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB SOL 2/3-Doors                          -1.056e-07   8.31e-08     -1.270      0.204   -2.69e-07    5.77e-08
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA 2/3-Doors                         -716.3102   5002.281     -0.143      0.886   -1.05e+04    9109.140
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA AUT4 2/3-Doors                    4448.3625   3256.419      1.366      0.172   -1947.876    1.08e+04
+Model_?TOYOTA Corolla 1.6 16V VVT I LIFTB LUNA 4/5-Doors                          -3762.5693   4976.953     -0.756      0.450   -1.35e+04    6013.131
+Model_?TOYOTA Corolla 1.6 16V VVT I LIFTB SOL 4/5-Doors                           -3496.7122   4955.756     -0.706      0.481   -1.32e+04    6237.355
+Model_?TOYOTA Corolla 1.6 16V VVT I LIFTB TERRA 4/5-Doors                         -3734.3743   4920.608     -0.759      0.448   -1.34e+04    5930.654
+Model_?TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA 4/5-Doors                         -1007.8186   4858.904     -0.207      0.836   -1.06e+04    8536.011
+Model_?TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA AUT4 4/5-Doors                     2111.2391   3114.133      0.678      0.498   -4005.523    8228.001
+Model_?TOYOTA Corolla 1.6 16V VVT I WAGON TERRA Stationwagen                      -1542.1506   4926.610     -0.313      0.754   -1.12e+04    8134.668
+Model_?TOYOTA Corolla 1.6 16v Linea Luna Stationwagen                             -2989.3271   5002.564     -0.598      0.550   -1.28e+04    6836.679
+Model_?TOYOTA Corolla 1.6 16v VVTi Linea Sol 4/5-Doors                             1294.9461   4815.208      0.269      0.788   -8163.058    1.08e+04
+Model_?TOYOTA Corolla 1.6 HB LINEA TERRA 2/3-Doors                                 7168.6597   5147.744      1.393      0.164   -2942.509    1.73e+04
+Model_?TOYOTA Corolla 1.6 LB LINEA SOL 4/5-Doors                                  -3.067e-07   7.04e-08     -4.360      0.000   -4.45e-07   -1.69e-07
+Model_?TOYOTA Corolla 1.6 SDN LINEA SOL 4/5-Doors                                 -1110.5318   4954.564     -0.224      0.823   -1.08e+04    8621.193
+Model_?TOYOTA Corolla 1.6 SDN LINEA TERRA 4/5-Doors                                2.953e-07   8.21e-08      3.595      0.000    1.34e-07    4.57e-07
+Model_?TOYOTA Corolla 1.6 Terra LB Comf. 4/5-Doors                                -2.151e-07   8.03e-08     -2.679      0.008   -3.73e-07   -5.74e-08
+Model_?TOYOTA Corolla 1.6 VVT-i Linea Sol 4/5-Doors                               -2239.7788   5022.432     -0.446      0.656   -1.21e+04    7625.253
+Model_?TOYOTA Corolla 1.6 VVT-i Linea Terra Comfort 2/3-Doors                      3178.0367   5054.564      0.629      0.530   -6750.108    1.31e+04
+Model_?TOYOTA Corolla 1.6 VVTI Linea Terra Comfort 2/3-Doors                       3.425e-07   7.69e-08      4.452      0.000    1.91e-07    4.94e-07
+Model_?TOYOTA Corolla 1.6 VVTI Linea Terra liftback 4/5-Doors                     -3575.7723   5031.013     -0.711      0.478   -1.35e+04    6306.113
+Model_?TOYOTA Corolla 1.6 VVTi Terra Comfort 4/5-Doors                            -1135.6893   5133.884     -0.221      0.825   -1.12e+04    8948.255
+Model_?TOYOTA Corolla 1.6 terra comfort 5drs airco 4/5-Doors                      -2776.0050   5194.343     -0.534      0.593    -1.3e+04    7426.692
+Model_?TOYOTA Corolla 1.8 16V VVTLI 3DR T SPORT 2/3-Doors                           2.64e+04   2.33e+04      1.133      0.257   -1.93e+04    7.21e+04
+Model_?TOYOTA Corolla 1.8 VVTL-i T-Sport 3-Drs 4/5-Doors                           2.426e+04   2.34e+04      1.035      0.301   -2.18e+04    7.03e+04
+Model_?TOYOTA Corolla 1.9 D HATCHB SOL 2/3-Doors                                  -4471.6768   3091.388     -1.446      0.149   -1.05e+04    1600.410
+Model_?TOYOTA Corolla 1.9 D HATCHB TERRA 2/3-Doors                                -2368.8968   2995.230     -0.791      0.429   -8252.110    3514.316
+Model_?TOYOTA Corolla 1.9 D LIFTB TERRA 4/5-Doors                                 -8114.6939   2995.973     -2.709      0.007    -1.4e+04   -2230.022
+Model_?TOYOTA Corolla 1.9 D SEDAN TERRA 4/5-Doors                                 -3786.0239   2861.832     -1.323      0.186   -9407.217    1835.169
+Model_?TOYOTA Corolla 1800 T SPORT VVT I 2/3-Doors                                 1.241e-07   5.12e-08      2.423      0.016    2.35e-08    2.25e-07
+Model_?TOYOTA Corolla 2.0 D4D 90 3DR SOL BNS 2/3-Doors                             1.835e-07   5.12e-08      3.582      0.000    8.29e-08    2.84e-07
+Model_?TOYOTA Corolla 2.0 D4D 90 3DR TERRA 2/3-Doors                              -2.066e-08   6.51e-08     -0.317      0.751   -1.49e-07    1.07e-07
+Model_?TOYOTA Corolla 2.0 D4D 90 5DR SOL 4/5-Doors                                 2196.6652   1652.093      1.330      0.184   -1048.367    5441.697
+Model_?TOYOTA Corolla 2.0 D4D 90 5DR TERRA COMFORT 4/5-Doors                      -5.901e-08   6.96e-08     -0.848      0.397   -1.96e-07    7.76e-08
+Model_?TOYOTA Corolla 2.0 D4D HATCHB TERRA 2/3-Doors                               2144.5521   1724.523      1.244      0.214   -1242.746    5531.850
+Model_?TOYOTA Corolla 2.0 D4D Linea Terra Comfort 4/5-Doors                        2029.3460   1563.212      1.298      0.195   -1041.107    5099.799
+Model_?TOYOTA Corolla 2.0 DSL HATCHB LINEA TERRA 2/3-Doors                        -1280.0799   9918.380     -0.129      0.897   -2.08e+04    1.82e+04
+Model_?TOYOTA Corolla LIFTBACK 1.4 VVT-i LINEA TERRA 4/5-Doors                    -7585.0365   5808.614     -1.306      0.192    -1.9e+04    3824.208
+Model_?TOYOTA Corolla LIFTBACK 1.6 Linea terra 4/5-Doors                          -3916.6294   5000.796     -0.783      0.434   -1.37e+04    5905.904
+Model_?TOYOTA Corolla VERSO 2.0 D4D LINEA SOL MPV                                  9601.3925   1.46e+04      0.656      0.512   -1.92e+04    3.84e+04
+Model_?TOYOTA Corolla VERSO 2.0 D4D SOL (7) BNS MPV                                 1.26e+04    1.5e+04      0.839      0.402   -1.69e+04    4.21e+04
+Model_TOYOTA Corolla                                                              -1.892e+04   1.11e+04     -1.708      0.088   -4.07e+04    2835.281
+Model_TOYOTA Corolla ! 1.6-16v vvt-i sol airco sedan 4/5-Doors                    -3414.0228   4946.374     -0.690      0.490   -1.31e+04    6301.615
+Model_TOYOTA Corolla 1 6-16v VVT-i Linea Terra Comfort Airco 5drs 4/5-Doors       -2.363e-07   7.89e-08     -2.997      0.003   -3.91e-07   -8.14e-08
+Model_TOYOTA Corolla 1.3 16V 2/3-Doors                                              7.31e-08   7.33e-08      0.998      0.319   -7.08e-08    2.17e-07
+Model_TOYOTA Corolla 1.3 16V HATCHB 2/3-Doors                                     -8927.7502   8381.458     -1.065      0.287   -2.54e+04    7535.059
+Model_TOYOTA Corolla 1.3 16V HATCHB G6 2/3-Doors                                  -8742.5680   8325.709     -1.050      0.294   -2.51e+04    7610.739
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA LUNA 2/3-Doors                          -8681.7512   8319.786     -1.044      0.297    -2.5e+04    7659.923
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA LUNA AUT3 2/3-Doors                     -4625.7559   1.02e+04     -0.455      0.649   -2.46e+04    1.53e+04
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA TERRA 2/3-Doors                         -8868.6895   8348.795     -1.062      0.289   -2.53e+04    7529.964
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA TERRA AUT3 2/3-Doors                    -4853.1504   1.02e+04     -0.477      0.634   -2.48e+04    1.51e+04
+Model_TOYOTA Corolla 1.3 16V HATCHB S 2/3-Doors                                   -9143.6220   8362.063     -1.093      0.275   -2.56e+04    7281.093
+Model_TOYOTA Corolla 1.3 16V L. TERRA COMFORT 2/3-Doors                            -3.94e-08   5.64e-08     -0.699      0.485    -1.5e-07    7.14e-08
+Model_TOYOTA Corolla 1.3 16V LB Linea Luna 4/5-Doors                              -1.056e+04   8402.756     -1.257      0.209   -2.71e+04    5942.394
+Model_TOYOTA Corolla 1.3 16V LIFTB G6 4/5-Doors                                   -1.046e+04   8348.390     -1.253      0.211   -2.69e+04    5939.203
+Model_TOYOTA Corolla 1.3 16V LIFTB LINEA LUNA 4/5-Doors                           -1.106e+04   8361.069     -1.322      0.187   -2.75e+04    5366.130
+Model_TOYOTA Corolla 1.3 16V LIFTB LINEA TERRA 4/5-Doors                          -1.123e+04   8392.797     -1.338      0.182   -2.77e+04    5259.358
+Model_TOYOTA Corolla 1.3 16V LIFTB LINEA TERRA AUT3 4/5-Doors                     -6616.2078   1.03e+04     -0.645      0.519   -2.68e+04    1.35e+04
+Model_TOYOTA Corolla 1.3 16V Linea Terra 2/3-Doors                                -9143.6837   8392.253     -1.090      0.276   -2.56e+04    7340.330
+Model_TOYOTA Corolla 1.3 16V Linea Terra 4/5-Doors                                -8811.8321   8371.265     -1.053      0.293   -2.53e+04    7630.956
+Model_TOYOTA Corolla 1.3 16V Linea Terra Liftb 2/3-Doors                          -7404.3794   8359.486     -0.886      0.376   -2.38e+04    9015.273
+Model_TOYOTA Corolla 1.3 16V Linea Terra Liftb 4/5-Doors                          -1.172e+04   8451.068     -1.387      0.166   -2.83e+04    4878.813
+Model_TOYOTA Corolla 1.3 16V SEDAN LINEA TERRA 4/5-Doors                          -1.025e+04   8330.977     -1.230      0.219   -2.66e+04    6114.216
+Model_TOYOTA Corolla 1.3 16V SEDAN LINEA TERRA AUT3 4/5-Doors                     -6102.0845   1.02e+04     -0.599      0.550   -2.61e+04    1.39e+04
+Model_TOYOTA Corolla 1.3 16V WAGON LINEA LUNA Stationwagen                        -1.169e+04   8352.062     -1.400      0.162   -2.81e+04    4715.084
+Model_TOYOTA Corolla 1.3 16V WAGON LINEA TERRA Stationwagen                       -1.119e+04   8381.160     -1.336      0.182   -2.77e+04    5267.739
+Model_TOYOTA Corolla 1.3 16v linea terra                                          -1.082e+04   8401.407     -1.287      0.198   -2.73e+04    5685.652
+Model_TOYOTA Corolla 1.3 3D Linea Terra 2/3-Doors                                 -9481.3530   8398.907     -1.129      0.259    -2.6e+04    7015.730
+Model_TOYOTA Corolla 1.3 G6 liftback 4/5-Doors                                    -3.835e-08   7.13e-08     -0.538      0.591   -1.78e-07    1.02e-07
+Model_TOYOTA Corolla 1.3 HB LINEA TERRA 2/3-Doors                                 -8009.9655   8401.161     -0.953      0.341   -2.45e+04    8491.545
+Model_TOYOTA Corolla 1.3 HB LINEA TERRA AUT 2/3-Doors                             -1.116e-07   8.63e-08     -1.292      0.197   -2.81e-07     5.8e-08
+Model_TOYOTA Corolla 1.3 HB LINEA TERRA AUT Anders                                -6.302e-08   7.33e-08     -0.860      0.390   -2.07e-07    8.09e-08
+Model_TOYOTA Corolla 1.3 HB Linea Terra 2/3-Doors                                 -9417.9558   8373.500     -1.125      0.261   -2.59e+04    7029.223
+Model_TOYOTA Corolla 1.3 Hatchback 2/3-Doors                                      -8538.6303   8407.148     -1.016      0.310   -2.51e+04    7974.640
+Model_TOYOTA Corolla 1.3 I LUNA 2/3-Doors                                         -1.178e+04   8419.727     -1.399      0.162   -2.83e+04    4756.824
+Model_TOYOTA Corolla 1.3 LB LINEA TERRA 4/5-Doors                                 -1.082e+04   8549.682     -1.266      0.206   -2.76e+04    5968.426
+Model_TOYOTA Corolla 1.3 LIN. Terra 2/3-Doors                                     -1.766e-08   6.11e-08     -0.289      0.773   -1.38e-07    1.02e-07
+Model_TOYOTA Corolla 1.3 Linea Luna Hatchback 2/3-Doors                           -6.925e-08   8.87e-08     -0.781      0.435   -2.43e-07    1.05e-07
+Model_TOYOTA Corolla 1.3 Linea Terra 3 drs 2/3-Doors                              -7548.7806   8373.701     -0.901      0.368    -2.4e+04    8898.792
+Model_TOYOTA Corolla 1.3 Linea Terra 4/5-Doors                                    -8905.3333   1.03e+04     -0.862      0.389   -2.92e+04    1.14e+04
+Model_TOYOTA Corolla 1.3 Linea Terra Comfort 4/5-Doors                            -1.049e+04   8400.692     -1.248      0.213    -2.7e+04    6015.441
+Model_TOYOTA Corolla 1.3 Linea Terra Hatchback 2/3-Doors                          -4606.6596   1.02e+04     -0.451      0.652   -2.47e+04    1.55e+04
+Model_TOYOTA Corolla 1.3 Linea Terra sedan 4/5-Doors                              -1.071e+04   8400.409     -1.275      0.203   -2.72e+04    5785.375
+Model_TOYOTA Corolla 1.3 Linea Terra sedan Comf. 4/5-Doors                        -9706.3856   8401.696     -1.155      0.248   -2.62e+04    6796.176
+Model_TOYOTA Corolla 1.3 Linea Terra wagon Stationwagen                           -1.126e+04   8441.048     -1.333      0.183   -2.78e+04    5324.547
+Model_TOYOTA Corolla 1.3 SDN LINEA TERRA AUT 4/5-Doors                              1.73e-07   5.85e-08      2.955      0.003     5.8e-08    2.88e-07
+Model_TOYOTA Corolla 1.3-16V Luna 2/3-Doors                                        1.975e-07   7.45e-08      2.651      0.008    5.12e-08    3.44e-07
+Model_TOYOTA Corolla 1.3I LINEATERRA 2/3-Doors                                    -8781.7284   8362.174     -1.050      0.294   -2.52e+04    7643.205
+Model_TOYOTA Corolla 1.3i LINEA TERRA 2/3-Doors                                   -9754.2670   8420.294     -1.158      0.247   -2.63e+04    6784.825
+Model_TOYOTA Corolla 1.3i-16v Linea Terra 5d 4/5-Doors                             2.772e-07   5.56e-08      4.983      0.000    1.68e-07    3.86e-07
+Model_TOYOTA Corolla 1.4 16V 5DR TERRA 4/5-Doors                                  -4802.1119   5754.293     -0.835      0.404   -1.61e+04    6500.435
+Model_TOYOTA Corolla 1.4 16V VVT I 3DR 2/3-Doors                                  -5557.3782   5918.634     -0.939      0.348   -1.72e+04    6067.967
+Model_TOYOTA Corolla 1.4 16V VVT I 3DR TERRA 2/3-Doors                            -4882.6401   5914.283     -0.826      0.409   -1.65e+04    6734.160
+Model_TOYOTA Corolla 1.4 16V VVT I 3DR TERRA COMFORT 2/3-Doors                    -4943.4631   5874.733     -0.841      0.400   -1.65e+04    6595.653
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR LUNA 4/5-Doors                             -6159.8289   5720.829     -1.077      0.282   -1.74e+04    5076.989
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR LUNA BNS 4/5-Doors                         -6161.1340   5716.262     -1.078      0.282   -1.74e+04    5066.713
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR SOL 4/5-Doors                              -6078.6326   5756.140     -1.056      0.291   -1.74e+04    5227.543
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR TERRA 4/5-Doors                            -7524.5812   5698.860     -1.320      0.187   -1.87e+04    3669.085
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR TERRA COMFORT 4/5-Doors                    -7054.6672   5689.194     -1.240      0.215   -1.82e+04    4120.014
+Model_TOYOTA Corolla 1.4 16V VVT I HATCHB SOL 2/3-Doors                           -4958.4198   5707.950     -0.869      0.385   -1.62e+04    6253.102
+Model_TOYOTA Corolla 1.4 16V VVT I HATCHB TERRA 2/3-Doors                         -5417.3199   5714.178     -0.948      0.344   -1.66e+04    5806.435
+Model_TOYOTA Corolla 1.4 16V VVT I LIFTB LUNA 4/5-Doors                           -8284.4987   5704.622     -1.452      0.147   -1.95e+04    2920.486
+Model_TOYOTA Corolla 1.4 16V VVT I LIFTB SOL 4/5-Doors                            -8750.7078   5683.544     -1.540      0.124   -1.99e+04    2412.876
+Model_TOYOTA Corolla 1.4 16V VVT I LIFTB TERRA 4/5-Doors                          -8264.5094   5697.788     -1.450      0.147   -1.95e+04    2927.052
+Model_TOYOTA Corolla 1.4 16V VVT I SEDAN TERRA COMF 4/5-Doors                     -5902.6400   5678.239     -1.040      0.299   -1.71e+04    5250.523
+Model_TOYOTA Corolla 1.4 HB LINEA TERRA 2/3-Doors                                 -6433.3294   5781.029     -1.113      0.266   -1.78e+04    4921.734
+Model_TOYOTA Corolla 1.4 HB Terra 2/3-Doors                                       -7152.6306   5788.487     -1.236      0.217   -1.85e+04    4217.082
+Model_TOYOTA Corolla 1.4 LB LINEA TERRA 4/5-Doors                                 -8003.7507   5796.012     -1.381      0.168   -1.94e+04    3380.743
+Model_TOYOTA Corolla 1.4 VVT-i Linea Luna liftback 4/5-Doors                      -1.196e-07   6.54e-08     -1.827      0.068   -2.48e-07    8.95e-09
+Model_TOYOTA Corolla 1.4 VVT-i Linea Sol HB 2/3-Doors                             -5119.4750   5760.287     -0.889      0.375   -1.64e+04    6194.847
+Model_TOYOTA Corolla 1.4 VVT-i Sol 2/3-Doors                                      -1.051e+04   9507.745     -1.105      0.269   -2.92e+04    8165.461
+Model_TOYOTA Corolla 1.4 VVT-i Terra 2/3-Doors                                    -3.333e-07   6.67e-08     -4.998      0.000   -4.64e-07   -2.02e-07
+Model_TOYOTA Corolla 1.4 VVTI L.Terra HB 4/5-Doors                                -6711.3919   5928.650     -1.132      0.258   -1.84e+04    4933.627
+Model_TOYOTA Corolla 1.4 VVTI LB 4/5-Doors                                        -7200.5390   5748.963     -1.252      0.211   -1.85e+04    4091.539
+Model_TOYOTA Corolla 1.4 VVTI Linea Terra 2/3-Doors                                4.503e-07    7.2e-08      6.252      0.000    3.09e-07    5.92e-07
+Model_TOYOTA Corolla 1.4-16v VVT-i Linea Terra Comfort NIEUW AIRCO 4/5-Doors       -1.37e-07   5.49e-08     -2.494      0.013   -2.45e-07   -2.91e-08
+Model_TOYOTA Corolla 1.6 16V G6 2/3-Doors                                          9714.3314   1.31e+04      0.740      0.460   -1.61e+04    3.55e+04
+Model_TOYOTA Corolla 1.6 16V HATCHB G6 2/3-Doors                                   7711.0321   1.31e+04      0.588      0.557    -1.8e+04    3.35e+04
+Model_TOYOTA Corolla 1.6 16V HATCHB G6 R 2/3-Doors                                 8140.1789   1.31e+04      0.621      0.535   -1.76e+04    3.39e+04
+Model_TOYOTA Corolla 1.6 16V HATCHB GTSI 2/3-Doors                                 -257.1731   5031.454     -0.051      0.959   -1.01e+04    9625.579
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA LUNA 2/3-Doors                          -1330.3061   5066.348     -0.263      0.793   -1.13e+04    8620.985
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA LUNA AUT4 2/3-Doors                      2793.5508   4834.695      0.578      0.564   -6702.728    1.23e+04
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA TERRA 2/3-Doors                          -731.6199   4998.612     -0.146      0.884   -1.05e+04    9086.624
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA TERRA AUT4 2/3-Doors                     2001.2583   4786.098      0.418      0.676   -7399.567    1.14e+04
+Model_TOYOTA Corolla 1.6 16V HATCHB S 2/3-Doors                                    -665.7390   5005.592     -0.133      0.894   -1.05e+04    9166.216
+Model_TOYOTA Corolla 1.6 16V HATCHBACK LINEA LUNA 2/3-Doors                       -1644.2633   4048.956     -0.406      0.685   -9597.198    6308.672
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA LUNA 4/5-Doors                           -3691.7551   4935.060     -0.748      0.455   -1.34e+04    6001.660
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA LUNA AUT4 4/5-Doors                       -361.2048   4793.072     -0.075      0.940   -9775.728    9053.319
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA TERRA 4/5-Doors                          -3516.6344   4904.588     -0.717      0.474   -1.32e+04    6116.929
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA TERRA AUT4 4/5-Doors                      -869.5749   4762.793     -0.183      0.855   -1.02e+04    8485.475
+Model_TOYOTA Corolla 1.6 16V LIFTBACK LINEA LUNA 4/5-Doors                        -4326.7030   4957.828     -0.873      0.383   -1.41e+04    5411.433
+Model_TOYOTA Corolla 1.6 16V S-uitvoering 2/3-Doors                                -554.3208   5034.926     -0.110      0.912   -1.04e+04    9335.251
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA LUNA 4/5-Doors                           -2174.5318   4903.175     -0.443      0.658   -1.18e+04    7456.256
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA LUNA AUT4 4/5-Doors                       1596.5183   3112.553      0.513      0.608   -4517.141    7710.177
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA TERRA 4/5-Doors                          -1726.0613   4844.667     -0.356      0.722   -1.12e+04    7789.804
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA TERRA AUT4 4/5-Doors                      1223.5383   3081.941      0.397      0.692   -4829.992    7277.068
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR SOL 2/3-Doors                               1058.9840   5293.170      0.200      0.842   -9337.830    1.15e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR SOL AUT4 2/3-Doors                          4289.4592   3841.751      1.117      0.265   -3256.485    1.18e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR TERRA 2/3-Doors                             7.592e-08   5.92e-08      1.282      0.200   -4.04e-08    1.92e-07
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR TERRA COMF AUT 2/3-Doors                   -1.702e-07   1.09e-07     -1.566      0.118   -3.84e-07    4.33e-08
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR TERRA COMFORT 2/3-Doors                      779.3824   5237.314      0.149      0.882   -9507.718    1.11e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR EXEC 4/5-Doors                               777.8578   5042.155      0.154      0.877   -9125.913    1.07e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR EXEC BNS 4/5-Doors                          4774.2535   5072.521      0.941      0.347   -5189.162    1.47e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR SOL 4/5-Doors                                 88.5160   5019.412      0.018      0.986   -9770.583    9947.615
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR SOL AUT4 4/5-Doors                          4868.4471   3465.839      1.405      0.161   -1939.133    1.17e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR SOL BNS 4/5-Doors                            516.6875   5075.407      0.102      0.919   -9452.396    1.05e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR TERRA 4/5-Doors                              758.0314   4976.205      0.152      0.879   -9016.201    1.05e+04
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR TERRA COMFORT 4/5-Doors                     -708.4842   4937.281     -0.143      0.886   -1.04e+04    8989.294
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB G6 2/3-Doors                             1069.4051   5069.817      0.211      0.833   -8888.699     1.1e+04
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB G6 4/5-Doors                             1.534e-08   8.99e-08      0.171      0.865   -1.61e-07    1.92e-07
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB SOL 2/3-Doors                             551.6596   5040.181      0.109      0.913   -9348.233    1.05e+04
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB SOL AUT4 2/3-Doors                       3630.1842   3237.931      1.121      0.263   -2729.740    9990.109
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA 2/3-Doors                          -133.0475   4997.262     -0.027      0.979   -9948.640    9682.545
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA AUT4 2/3-Doors                     3562.8998   3186.849      1.118      0.264   -2696.690    9822.489
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB LUNA 4/5-Doors                           -3134.2723   4900.642     -0.640      0.523   -1.28e+04    6491.540
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB LUNA AUT4 4/5-Doors                       1171.5679   3204.780      0.366      0.715   -5123.242    7466.378
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB SOL 4/5-Doors                            -3247.9671   4941.063     -0.657      0.511    -1.3e+04    6457.239
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB SOL AUT4 4/5-Doors                        1595.7967   3275.577      0.487      0.626   -4838.073    8029.666
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB TERRA 4/5-Doors                          -3318.9942   4907.048     -0.676      0.499    -1.3e+04    6319.400
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN SOL 4/5-Doors                             1150.0318   5027.319      0.229      0.819   -8724.599     1.1e+04
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN SOL AUT4 4/5-Doors                        6008.2857   3278.226      1.833      0.067    -430.786    1.24e+04
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN SOL BNS AUT4 4/5-Doors                   -7.647e-08   4.44e-08     -1.721      0.086   -1.64e-07    1.08e-08
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA 4/5-Doors                           -945.5692   4871.690     -0.194      0.846   -1.05e+04    8623.375
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA AUT4 4/5-Doors                      1825.1919   3092.137      0.590      0.555   -4248.365    7898.748
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA COMF 4/5-Doors                       797.9426   4937.356      0.162      0.872   -8899.983    1.05e+04
+Model_TOYOTA Corolla 1.6 16V VVT I WAGON BLUE Stationwagen                        -2374.0915   4927.613     -0.482      0.630   -1.21e+04    7304.697
+Model_TOYOTA Corolla 1.6 16V VVT I WAGON TERRA Stationwagen                       -2326.8919   4919.467     -0.473      0.636    -1.2e+04    7335.897
+Model_TOYOTA Corolla 1.6 16V WAGON LINEA LUNA Stationwagen                        -3160.0776   4973.993     -0.635      0.525   -1.29e+04    6609.809
+Model_TOYOTA Corolla 1.6 16V WAGON LINEA TERRA AUT4 Stationwagen                   -537.7800   4806.907     -0.112      0.911   -9979.479    8903.919
+Model_TOYOTA Corolla 1.6 16V WAGON LINEA TERRA Stationwagen                       -2891.3781   4898.623     -0.590      0.555   -1.25e+04    6730.469
+Model_TOYOTA Corolla 1.6 16v L.SOL 2/3-Doors                                       3503.8897   5122.463      0.684      0.494   -6557.623    1.36e+04
+Model_TOYOTA Corolla 1.6 16v Liftback Linea Luna 4/5-Doors                         1.273e-07   4.38e-08      2.907      0.004    4.13e-08    2.13e-07
+Model_TOYOTA Corolla 1.6 16v Liftback Linea So 4/5-Doors                          -3400.4369   5026.975     -0.676      0.499   -1.33e+04    6473.517
+Model_TOYOTA Corolla 1.6 16v Liftback Linea Sol 4/5-Doors                         -1.185e-07   4.71e-08     -2.514      0.012   -2.11e-07   -2.59e-08
+Model_TOYOTA Corolla 1.6 16v Liftback Linea Terra 4/5-Doors                       -2931.6228   4998.066     -0.587      0.558   -1.27e+04    6885.549
+Model_TOYOTA Corolla 1.6 16v Linea Luna 2/3-Doors                                  3544.9275   3720.474      0.953      0.341   -3762.805    1.09e+04
+Model_TOYOTA Corolla 1.6 16v Linea Terra 4/5-Doors                                -4346.4544   5011.351     -0.867      0.386   -1.42e+04    5496.812
+Model_TOYOTA Corolla 1.6 16v TERRA 4/5-Doors                                      -3276.3971   4917.351     -0.666      0.505   -1.29e+04    6382.235
+Model_TOYOTA Corolla 1.6 16v VVT-i Linea Sol 2/3-Doors                            -2.218e-08   5.64e-08     -0.393      0.694   -1.33e-07    8.86e-08
+Model_TOYOTA Corolla 1.6 16v VVTi Terra Comfort 2/3-Doors                           868.6550   5068.686      0.171      0.864   -9087.229    1.08e+04
+Model_TOYOTA Corolla 1.6 16v VVTi Terra Comfort 4/5-Doors                         -3742.4272   5137.223     -0.728      0.467   -1.38e+04    6348.076
+Model_TOYOTA Corolla 1.6 3D Terra/Comf. 2/3-Doors                                   307.7719   5020.502      0.061      0.951   -9553.469    1.02e+04
+Model_TOYOTA Corolla 1.6 4/5-Doors                                                -3758.9624   4418.427     -0.851      0.395   -1.24e+04    4919.686
+Model_TOYOTA Corolla 1.6 5drs 1 4/5-Doors                                          5.631e-09   8.63e-08      0.065      0.948   -1.64e-07    1.75e-07
+Model_TOYOTA Corolla 1.6 G6 HB 2/3-Doors                                           8599.3676   1.31e+04      0.655      0.512   -1.72e+04    3.44e+04
+Model_TOYOTA Corolla 1.6 G6-R 2/3-Doors                                            -929.9540   5137.996     -0.181      0.856    -1.1e+04    9162.067
+Model_TOYOTA Corolla 1.6 G6R HB 2/3-Doors                                           2.84e-08   7.47e-08      0.380      0.704   -1.18e-07    1.75e-07
+Model_TOYOTA Corolla 1.6 GL LB 4/5-Doors                                          -3803.7633   4973.320     -0.765      0.445   -1.36e+04    5964.802
+Model_TOYOTA Corolla 1.6 GTSi HB 2/3-Doors                                         -485.3103   5085.949     -0.095      0.924   -1.05e+04    9504.480
+Model_TOYOTA Corolla 1.6 GTSi HB 4/5-Doors                                        -1.454e-07   7.89e-08     -1.842      0.066      -3e-07    9.64e-09
+Model_TOYOTA Corolla 1.6 HATCHBACK 2/3-Doors                                        1.89e-07      6e-08      3.149      0.002    7.11e-08    3.07e-07
+Model_TOYOTA Corolla 1.6 HB LINEA LUNA 2/3-Doors                                   4.058e-08   7.86e-08      0.516      0.606   -1.14e-07    1.95e-07
+Model_TOYOTA Corolla 1.6 HB LINEA LUNA AUT 2/3-Doors                               4393.0053   3396.488      1.293      0.196   -2278.357    1.11e+04
+Model_TOYOTA Corolla 1.6 HB LINEA SOL 4/5-Doors                                   -1.787e+04   1.03e+04     -1.730      0.084   -3.82e+04    2424.355
+Model_TOYOTA Corolla 1.6 HB LINEA TERRA 2/3-Doors                                  1.612e-07   7.55e-08      2.135      0.033    1.29e-08    3.09e-07
+Model_TOYOTA Corolla 1.6 HB Linea Luna 2/3-Doors                                   5.865e-08    6.2e-08      0.946      0.344   -6.31e-08     1.8e-07
+Model_TOYOTA Corolla 1.6 HB Linea Terra 2/3-Doors                                 -2167.5465   5004.856     -0.433      0.665    -1.2e+04    7662.961
+Model_TOYOTA Corolla 1.6 HB SOL 2/3-Doors                                          4.917e-08    6.9e-08      0.713      0.476   -8.63e-08    1.85e-07
+Model_TOYOTA Corolla 1.6 HB Terra 4/5-Doors                                       -1.462e-07   5.71e-08     -2.558      0.011   -2.58e-07   -3.39e-08
+Model_TOYOTA Corolla 1.6 Hatchback 2/3-Doors                                      -1596.7291   5108.222     -0.313      0.755   -1.16e+04    8436.811
+Model_TOYOTA Corolla 1.6 I lb luna 4/5-Doors                                      -6.494e-08   7.77e-08     -0.836      0.403   -2.17e-07    8.76e-08
+Model_TOYOTA Corolla 1.6 LB *G3* AIRCO 4/5-Doors                                  -5.931e-09   6.04e-08     -0.098      0.922   -1.25e-07    1.13e-07
+Model_TOYOTA Corolla 1.6 LB 4/5-Doors                                             -3978.3094   4989.757     -0.797      0.426   -1.38e+04    5822.542
+Model_TOYOTA Corolla 1.6 LB LINEA LUNA 4/5-Doors                                  -4646.7138   4943.670     -0.940      0.348   -1.44e+04    5063.613
+Model_TOYOTA Corolla 1.6 LB LINEA TERRA 4/5-Doors                                 -5530.0529   4939.414     -1.120      0.263   -1.52e+04    4171.915
+Model_TOYOTA Corolla 1.6 LB Linea Terra 4/5-Doors                                  1.134e-07   6.05e-08      1.875      0.061   -5.39e-09    2.32e-07
+Model_TOYOTA Corolla 1.6 LINEA TERRA 4/5-Doors                                     1.227e-07   4.88e-08      2.515      0.012    2.69e-08    2.19e-07
+Model_TOYOTA Corolla 1.6 LL HB 4/5-Doors                                          -3520.0405   5019.830     -0.701      0.483   -1.34e+04    6339.881
+Model_TOYOTA Corolla 1.6 Lin.Terra Aut. 2/3-Doors                                 -5748.8847   5770.932     -0.996      0.320   -1.71e+04    5586.346
+Model_TOYOTA Corolla 1.6 Lin.Terra Aut. 4/5-Doors                                 -8.598e-08   7.93e-08     -1.085      0.279   -2.42e-07    6.97e-08
+Model_TOYOTA Corolla 1.6 Linea Luna 2/3-Doors                                     -6.637e-09   4.73e-08     -0.140      0.888   -9.95e-08    8.62e-08
+Model_TOYOTA Corolla 1.6 Linea Luna 4/5-Doors                                     -3192.8766   4983.465     -0.641      0.522    -1.3e+04    6595.616
+Model_TOYOTA Corolla 1.6 Linea Luna Aut. 4/5-Doors                                -1.633e+04   1.36e+04     -1.198      0.231   -4.31e+04    1.04e+04
+Model_TOYOTA Corolla 1.6 Linea Luna Wagon Stationwagen                            -9.904e-08   4.38e-08     -2.260      0.024   -1.85e-07    -1.3e-08
+Model_TOYOTA Corolla 1.6 Linea Terra / Keuze uit 700 occasions 2/3-Doors          -8.865e-08   5.57e-08     -1.593      0.112   -1.98e-07    2.07e-08
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort 2/3-Doors                             2.909e-08   4.68e-08      0.622      0.534   -6.28e-08    1.21e-07
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort 4/5-Doors                            -2615.2366   4934.801     -0.530      0.596   -1.23e+04    7077.671
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort H 2/3-Doors                           -686.2143   5143.232     -0.133      0.894   -1.08e+04    9416.092
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort HB 2/3-Doors                          2.117e-08   6.54e-08      0.324      0.746   -1.07e-07     1.5e-07
+Model_TOYOTA Corolla 1.6 Linea Terra HB 2/3-Doors                                  2.047e-07   8.23e-08      2.487      0.013     4.3e-08    3.66e-07
+Model_TOYOTA Corolla 1.6 Linea Terra LB 4/5-Doors                                 -4915.0159   5032.932     -0.977      0.329   -1.48e+04    4970.638
+Model_TOYOTA Corolla 1.6 Linea Terra Sd 4/5-Doors                                 -9.648e-08   6.56e-08     -1.471      0.142   -2.25e-07    3.23e-08
+Model_TOYOTA Corolla 1.6 Linea Terra Sedan 4/5-Doors                              -1719.0021   4873.947     -0.353      0.724   -1.13e+04    7854.375
+Model_TOYOTA Corolla 1.6 Luna LB 4/5-Doors                                         2.062e-08   2.88e-08      0.716      0.474    -3.6e-08    7.72e-08
+Model_TOYOTA Corolla 1.6 Luna Liftback 4/5-Doors                                   4.847e-08   4.04e-08      1.199      0.231   -3.09e-08    1.28e-07
+Model_TOYOTA Corolla 1.6 SD TERRA 4/5-Doors                                       -3529.4009   5154.455     -0.685      0.494   -1.37e+04    6594.948
+Model_TOYOTA Corolla 1.6 SDN LINEA SOL 4/5-Doors                                   -703.4042   4919.502     -0.143      0.886   -1.04e+04    8959.453
+Model_TOYOTA Corolla 1.6 SDN LINEA TERRA 4/5-Doors                                -1563.0695   4898.033     -0.319      0.750   -1.12e+04    8057.618
+Model_TOYOTA Corolla 1.6 SDN LINEA TERRA AUT 4/5-Doors                              608.6741   3081.026      0.198      0.843   -5443.058    6660.407
+Model_TOYOTA Corolla 1.6 Terra 5-Doors Liftback 4/5-Doors                         -4239.8254   5061.791     -0.838      0.403   -1.42e+04    5702.514
+Model_TOYOTA Corolla 1.6 Terra HB 2/3-Doors                                       -8.728e-08   5.96e-08     -1.465      0.143   -2.04e-07    2.97e-08
+Model_TOYOTA Corolla 1.6 Terra LB 4/5-Doors                                       -4747.5343   4966.493     -0.956      0.340   -1.45e+04    5007.621
+Model_TOYOTA Corolla 1.6 Terra Stationwagen                                       -4437.4205   4980.288     -0.891      0.373   -1.42e+04    5344.832
+Model_TOYOTA Corolla 1.6 VVT-I 5DR LINEA SOL 4/5-Doors                             2.081e-07   6.34e-08      3.283      0.001    8.36e-08    3.33e-07
+Model_TOYOTA Corolla 1.6 VVT-I 5DR LINEA TERRA 4/5-Doors                           7.991e-09   5.28e-08      0.151      0.880   -9.57e-08    1.12e-07
+Model_TOYOTA Corolla 1.6 VVT-i L. Sol Wagon Stationwagen                           -798.3219   5046.465     -0.158      0.874   -1.07e+04    9113.915
+Model_TOYOTA Corolla 1.6 VVT-i Linea Sol 4/5-Doors                                 4.192e-09    1.2e-08      0.349      0.728   -1.94e-08    2.78e-08
+Model_TOYOTA Corolla 1.6 VVT-i Linea Terra Comfort 4/5-Doors                      -3669.1934   5049.300     -0.727      0.468   -1.36e+04    6248.611
+Model_TOYOTA Corolla 1.6 VVTI Linea Sol Sedan 4/5-Doors                            -665.6678   3311.001     -0.201      0.841   -7169.117    5837.782
+Model_TOYOTA Corolla 1.6 VVTI Linea Terra Comfort 4/5-Doors                        1.049e-08   3.37e-08      0.312      0.756   -5.56e-08    7.66e-08
+Model_TOYOTA Corolla 1.6 VVTI Linea Terra liftback 4/5-Doors                       2.481e-08    4.7e-08      0.528      0.598   -6.76e-08    1.17e-07
+Model_TOYOTA Corolla 1.6 VVTi Linea Luna 2/3-Doors                                -1.163e-07   5.44e-08     -2.137      0.033   -2.23e-07    -9.4e-09
+Model_TOYOTA Corolla 1.6 VVTi Linea Luna 4/5-Doors                                 2.456e-08   3.72e-08      0.661      0.509   -4.84e-08    9.76e-08
+Model_TOYOTA Corolla 1.6 VVTi Linea Luna Lift 4/5-Doors                           -2902.0106   5099.961     -0.569      0.570   -1.29e+04    7115.302
+Model_TOYOTA Corolla 1.6 VVTi Linea terra 2/3-Doors                               -1478.7778   5014.558     -0.295      0.768   -1.13e+04    8370.787
+Model_TOYOTA Corolla 1.6 VVTi Linea terra 4/5-Doors                                2050.6940   3656.696      0.561      0.575   -5131.767    9233.155
+Model_TOYOTA Corolla 1.6 WGN LINEA TERRA Stationwagen                             -3553.5226   5017.363     -0.708      0.479   -1.34e+04    6301.552
+Model_TOYOTA Corolla 1.6 lb aut 4/5-Doors                                         -2243.7736   3356.254     -0.669      0.504   -8836.108    4348.561
+Model_TOYOTA Corolla 1.6 linea terra 4/5-Doors                                    -2289.7484   4940.820     -0.463      0.643    -1.2e+04    7414.980
+Model_TOYOTA Corolla 1.6 sol lb 4/5-Doors                                          8.393e-09    2.5e-08      0.335      0.737   -4.07e-08    5.75e-08
+Model_TOYOTA Corolla 1.6 station 1 Stationwagen                                   -3406.7675   4991.000     -0.683      0.495   -1.32e+04    6396.525
+Model_TOYOTA Corolla 1.6 vvt-i nw model comfort airco 5drs 4/5-Doors              -1237.4879   5068.766     -0.244      0.807   -1.12e+04    8718.553
+Model_TOYOTA Corolla 1.6-16v Linea Terra 2/3-Doors                                 3.181e-08   3.11e-08      1.024      0.306   -2.92e-08    9.28e-08
+Model_TOYOTA Corolla 1.6-16v Linea Terra LB 4/5-Doors                             -6.889e-09   1.15e-08     -0.599      0.549   -2.95e-08    1.57e-08
+Model_TOYOTA Corolla 1.6-16v VVT-i Executive B.edition 4/5-Doors                   1745.3438   5088.804      0.343      0.732   -8250.054    1.17e+04
+Model_TOYOTA Corolla 1.6-16v VVT-i Linea Terra Comfort AIRCO NIEUW 5DRS 4/5-Doors -1125.9644   5525.750     -0.204      0.839    -1.2e+04    9727.681
+Model_TOYOTA Corolla 1.6-16v VVT-i Linea Terra Comfort NIEUW AIRCO 5drs 4/5-Doors -2151.1128   5530.439     -0.389      0.697    -1.3e+04    8711.743
+Model_TOYOTA Corolla 1.6HB 2/3-Doors                                               -597.1409   5080.647     -0.118      0.906   -1.06e+04    9382.237
+Model_TOYOTA Corolla 1.6I LIFTBACK 4/5-Doors                                       1.831e-09   4.07e-09      0.449      0.653   -6.17e-09    9.83e-09
+Model_TOYOTA Corolla 1.6I Luna liftback 4/5-Doors                                 -2586.9356   4980.900     -0.519      0.604   -1.24e+04    7196.519
+Model_TOYOTA Corolla 1.6i 16V VVT I SOL + Navigatie 4/5-Doors                     -1.315e-08   1.26e-08     -1.045      0.297   -3.79e-08    1.16e-08
+Model_TOYOTA Corolla 1.6i Linea Terra HB 2/3-Doors                                -1071.7919   5036.881     -0.213      0.832    -1.1e+04    8821.621
+Model_TOYOTA Corolla 1.6i-16 SPORTS TC 2/3-Doors                                   -260.8715   5138.744     -0.051      0.960   -1.04e+04    9832.620
+Model_TOYOTA Corolla 1.6v VVT-i Linea Sol 4/5-Doors                                1.123e-09   4.23e-09      0.265      0.791   -7.19e-09    9.44e-09
+Model_TOYOTA Corolla 1.8 16V VVTLI 3DR T SPORT 2/3-Doors                           3.398e+04   1.52e+04      2.239      0.026    4176.373    6.38e+04
+Model_TOYOTA Corolla 1.8 16V VVTLI 3DR T SPORT BNS 2/3-Doors                        3.23e+04   1.52e+04      2.128      0.034    2484.657    6.21e+04
+Model_TOYOTA Corolla 1.8 16V VVTLI 5DR T SPORT 4/5-Doors                           1.207e-08   1.06e-08      1.143      0.254   -8.67e-09    3.28e-08
+Model_TOYOTA Corolla 1.8 VVTL-i T-Sport 3-Drs 2/3-Doors                           -4.791e-09   5.09e-09     -0.940      0.347   -1.48e-08    5.22e-09
+Model_TOYOTA Corolla 1.8 VVTL-i T-Sport 4/5-Doors                                 -5.806e-10   3.85e-09     -0.151      0.880   -8.13e-09    6.97e-09
+Model_TOYOTA Corolla 1.8D 4/5-Doors                                               -1.073e+04   6771.789     -1.584      0.114    -2.4e+04    2573.355
+Model_TOYOTA Corolla 1.8D Stationwagen                                            -4.568e-09   5.83e-09     -0.784      0.434    -1.6e-08    6.88e-09
+Model_TOYOTA Corolla 1.9 D HATCHB SOL 2/3-Doors                                   -3896.4329   3083.424     -1.264      0.207   -9952.876    2160.010
+Model_TOYOTA Corolla 1.9 D HATCHB TERRA 2/3-Doors                                 -2889.5877   2988.449     -0.967      0.334   -8759.481    2980.306
+Model_TOYOTA Corolla 1.9 D HB SOL 2/3-Doors                                        1.775e-09   2.59e-09      0.686      0.493   -3.31e-09    6.86e-09
+Model_TOYOTA Corolla 1.9 D LB LINEA SOL 4/5-Doors                                 -4173.2122   3669.227     -1.137      0.256   -1.14e+04    3033.862
+Model_TOYOTA Corolla 1.9 D LIFTB LUNA 4/5-Doors                                   -2.386e-10   5.71e-10     -0.418      0.676   -1.36e-09    8.84e-10
+Model_TOYOTA Corolla 1.9 D LIFTB TERRA 4/5-Doors                                  -5862.9986   2941.065     -1.993      0.047   -1.16e+04     -86.176
+Model_TOYOTA Corolla 1.9 D Linea Terra 2/3-Doors                                  -5131.0974   3038.904     -1.688      0.092   -1.11e+04     837.900
+Model_TOYOTA Corolla 1.9 D SEDAN TERRA 4/5-Doors                                  -6013.5686   2891.880     -2.079      0.038   -1.17e+04    -333.356
+Model_TOYOTA Corolla 1.9 D Sedan 4/5-Doors                                        -4496.5158   3288.805     -1.367      0.172    -1.1e+04    1963.335
+Model_TOYOTA Corolla 1.9 D WAGON TERRA Stationwagen                               -5264.1633   2920.941     -1.802      0.072    -1.1e+04     473.132
+Model_TOYOTA Corolla 1.9 D WGN LINEA TERRA Stationwagen                           -5997.5250   3650.793     -1.643      0.101   -1.32e+04    1173.341
+Model_TOYOTA Corolla 1.9 D Wagon Stationwagen                                     -4.285e-10   9.47e-11     -4.524      0.000   -6.15e-10   -2.42e-10
+Model_TOYOTA Corolla 19D LB Linea Terra 4/5-Doors                                 -1.001e-10   4.38e-10     -0.229      0.819    -9.6e-10     7.6e-10
+Model_TOYOTA Corolla 2.0 D 4D Linea Sol 3 Doors 2/3-Doors                          3720.3671   2834.310      1.313      0.190   -1846.767    9287.501
+Model_TOYOTA Corolla 2.0 D Linea Terra 3d 2/3-Doors                                 2.03e-10    2.7e-10      0.752      0.452   -3.27e-10    7.33e-10
+Model_TOYOTA Corolla 2.0 D Linea Terra Liftback 4/5-Doors                          2098.6356   1873.726      1.120      0.263   -1581.726    5778.997
+Model_TOYOTA Corolla 2.0 D Linea luna Wagon Stationwagen                          -3.017e-11    2.1e-10     -0.143      0.886   -4.44e-10    3.83e-10
+Model_TOYOTA Corolla 2.0 D4D 110 3DR SOL 2/3-Doors                                 1.071e+04   1.15e+04      0.931      0.352   -1.19e+04    3.33e+04
+Model_TOYOTA Corolla 2.0 D4D 110 5DR EXEC BNS 4/5-Doors                           -2.802e-10   2.35e-10     -1.194      0.233   -7.41e-10    1.81e-10
+Model_TOYOTA Corolla 2.0 D4D 110 5DR SOL 4/5-Doors                                 9001.8241   1.14e+04      0.792      0.429   -1.33e+04    3.13e+04
+Model_TOYOTA Corolla 2.0 D4D 116 5DR LUNA 4/5-Doors                                8794.5036   1.47e+04      0.599      0.549      -2e+04    3.76e+04
+Model_TOYOTA Corolla 2.0 D4D 90 3DR TERRA 2/3-Doors                                4728.2139   2440.980      1.937      0.053     -66.345    9522.773
+Model_TOYOTA Corolla 2.0 D4D 90 3DR TERRA COMF BNS 2/3-Doors                      -2.443e-10   2.56e-10     -0.956      0.340   -7.46e-10    2.58e-10
+Model_TOYOTA Corolla 2.0 D4D 90 5DR TERRA 4/5-Doors                                1479.5062   1521.343      0.973      0.331   -1508.706    4467.719
+Model_TOYOTA Corolla 2.0 D4D 90 5DR TERRA COMFORT 4/5-Doors                        1078.2161   1356.593      0.795      0.427   -1586.396    3742.828
+Model_TOYOTA Corolla 2.0 D4D 90 WAGON SOL Stationwagen                             1.545e-10   5.93e-11      2.604      0.009     3.8e-11    2.71e-10
+Model_TOYOTA Corolla 2.0 D4D HATCHB SOL 2/3-Doors                                  1760.0363   1620.938      1.086      0.278   -1423.800    4943.873
+Model_TOYOTA Corolla 2.0 D4D HATCHB TERRA 2/3-Doors                                2673.7962   1588.580      1.683      0.093    -446.484    5794.076
+Model_TOYOTA Corolla 2.0 D4D LIFTB SOL 4/5-Doors                                   1345.9089   1167.257      1.153      0.249    -946.811    3638.629
+Model_TOYOTA Corolla 2.0 D4D Linea Sol 3 Doors 2/3-Doors                           3705.4613   2819.180      1.314      0.189   -1831.955    9242.878
+Model_TOYOTA Corolla 2.0 D4D SEDAN SOL 4/5-Doors                                    -68.1733    990.671     -0.069      0.945   -2014.043    1877.696
+Model_TOYOTA Corolla 2.0 DSL                                                       1286.7496   9637.340      0.134      0.894   -1.76e+04    2.02e+04
+Model_TOYOTA Corolla 2.0 DSL HATCHB LINEA LUNA 2/3-Doors                          -2419.9566   9955.866     -0.243      0.808    -2.2e+04    1.71e+04
+Model_TOYOTA Corolla 2.0 DSL HATCHB LINEA TERRA 2/3-Doors                         -1406.3787   9888.775     -0.142      0.887   -2.08e+04     1.8e+04
+Model_TOYOTA Corolla 2.0 DSL LIFTB LINEA LUNA 4/5-Doors                           -4199.6550   9904.695     -0.424      0.672   -2.37e+04    1.53e+04
+Model_TOYOTA Corolla 2.0 DSL LIFTB LINEA TERRA 4/5-Doors                          -3780.4359   9849.206     -0.384      0.701   -2.31e+04    1.56e+04
+Model_TOYOTA Corolla 2.0 DSL SEDAN LINEA TERRA 4/5-Doors                          -1536.7061   9813.813     -0.157      0.876   -2.08e+04    1.77e+04
+Model_TOYOTA Corolla 2.0 DSL WAGON LINEA TERRA COMM Anders                        -2945.8905   9939.274     -0.296      0.767   -2.25e+04    1.66e+04
+Model_TOYOTA Corolla 2.0 DSL WAGON LINEA TERRA Stationwagen                       -3568.4817   9850.942     -0.362      0.717   -2.29e+04    1.58e+04
+Model_TOYOTA Corolla 2.0 LB LINEA TERRA D 4/5-Doors                               -3535.6562   9869.339     -0.358      0.720   -2.29e+04    1.58e+04
+Model_TOYOTA Corolla 2.0 LB LINEA TERRA DSL 4/5-Doors                             -1279.4982   9969.874     -0.128      0.898   -2.09e+04    1.83e+04
+Model_TOYOTA Corolla 2.0 SDN LINEA TERRA DSL 4/5-Doors                                     0          0        nan        nan           0           0
+Model_TOYOTA Corolla 2.0 ST WGN LINEA TERRA DSL Stationwagen                               0          0        nan        nan           0           0
+Model_TOYOTA Corolla 2.0 d HB Diesel 2/3-Doors                                    -3502.9966   2100.534     -1.668      0.096   -7628.854     622.861
+Model_TOYOTA Corolla 2.0D 4/5-Doors                                               -7106.2940   9983.782     -0.712      0.477   -2.67e+04    1.25e+04
+Model_TOYOTA Corolla 2.0D LINEA TERRA+airco 2/3-Doors                                      0          0        nan        nan           0           0
+Model_TOYOTA Corolla 2.0D Linea Terra 2/3-Doors                                            0          0        nan        nan           0           0
+Model_TOYOTA Corolla 2.0D TERRA LIFTBACK 4/5-Doors                                -3631.7736   9994.084     -0.363      0.716   -2.33e+04     1.6e+04
+Model_TOYOTA Corolla 2.0D XL Sedan 4/5-Doors                                      -3956.6530   9833.043     -0.402      0.688   -2.33e+04    1.54e+04
+Model_TOYOTA Corolla 2.0diesel Stationwagen                                        -131.7426   2790.028     -0.047      0.962   -5611.900    5348.414
+Model_TOYOTA Corolla 2/3-Doors                                                    -1315.9554   5260.859     -0.250      0.803   -1.16e+04    9017.392
+Model_TOYOTA Corolla 3drs 13i-16V 2/3-Doors                                                0          0        nan        nan           0           0
+Model_TOYOTA Corolla Hatchback 1.6 Terra Comfort 2/3-Doors                                 0          0        nan        nan           0           0
+Model_TOYOTA Corolla LIFTBACK 1.3i Linea Luna Liftback 4/5-Doors                           0          0        nan        nan           0           0
+Model_TOYOTA Corolla LIFTBACK 1.3i Linea Terra Liftback 4/5-Doors                          0          0        nan        nan           0           0
+Model_TOYOTA Corolla LIFTBACK 1.4 16V VVTI TERRA 4/5-Doors                        -8775.5386   5749.636     -1.526      0.128   -2.01e+04    2517.862
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea Luna Liftback 4/5-Doors                   -4582.0449   4967.700     -0.922      0.357   -1.43e+04    5175.481
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea Sol 4/5-Doors                             -4672.1201   4966.977     -0.941      0.347   -1.44e+04    5083.988
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea Terra Liftback 4/5-Doors                  -3159.6331   5001.532     -0.632      0.528    -1.3e+04    6664.347
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea terra 4/5-Doors                           -4542.5609   4934.411     -0.921      0.358   -1.42e+04    5149.580
+Model_TOYOTA Corolla LIFTBACK 1.6-16v Linea Luna 2/3-Doors                         1974.7702   2254.539      0.876      0.381   -2453.581    6403.121
+Model_TOYOTA Corolla LIFTBACK 1.6-16v Linea Luna 4/5-Doors                                 0          0        nan        nan           0           0
+Model_TOYOTA Corolla LIFTBACK 1.9 D Linea Terra 4/5-Doors                                  0          0        nan        nan           0           0
+Model_TOYOTA Corolla Liftback 1.6 VVTI 4/5-Doors                                           0          0        nan        nan           0           0
+Model_TOYOTA Corolla Linea Luna 1.6i 16V 2/3-Doors                                -1303.3487   5095.824     -0.256      0.798   -1.13e+04    8705.839
+Model_TOYOTA Corolla Luna 5drs D4D116 PK 4/5-Doors                                 1.142e+04   1.48e+04      0.772      0.440   -1.76e+04    4.05e+04
+Model_TOYOTA Corolla Sw 20D Linea Terra Stationwagen                                       0          0        nan        nan           0           0
+Model_TOYOTA Corolla VERSO 2.0 D4D LINEA SOL MPV                                   9601.3925   1.46e+04      0.656      0.512   -1.92e+04    3.84e+04
+Model_TOYOTA Corolla VERSO 2.0 D4D SOL (7) MPV                                     1.109e+04    1.5e+04      0.738      0.461   -1.84e+04    4.06e+04
+Fuel_Type_Diesel                                                                  -4466.9306   5.15e+04     -0.087      0.931   -1.06e+05    9.66e+04
+Fuel_Type_Petrol                                                                   2482.5156   1855.929      1.338      0.182   -1162.889    6127.920
+==============================================================================
+Omnibus:                       53.524   Durbin-Watson:                   1.979
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              185.196
+Skew:                           0.175   Prob(JB):                     6.10e-41
+Kurtosis:                       5.245   Cond. No.                     3.63e+22
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 3.89e-33. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

@@ -1,0 +1,405 @@
+Mfg_Month
+Mfg_Year
+KM
+HP
+Met_Color
+Automatic
+cc
+Doors
+Cylinders
+Gears
+Quarterly_Tax
+Weight
+Mfr_Guarantee
+BOVAG_Guarantee
+Guarantee_Period
+ABS
+Airbag_1
+Airbag_2
+Airco
+Automatic_airco
+Boardcomputer
+CD_Player
+Central_Lock
+Powered_Windows
+Power_Steering
+Radio
+Mistlamps
+Sport_Model
+Backseat_Divider
+Metallic_Rim
+Radio_cassette
+Tow_Bar
+Model_?TOYOTA Corolla 1.3 16V HATCHB LINEA TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.3 16V WAGON LINEA TERRA Stationwagen
+Model_?TOYOTA Corolla 1.3 Linea Terra liftback 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I 3DR 2/3-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I 3DR TERRA COMFORT 2/3-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR LUNA 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I 5DR TERRA COMFORT 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I HATCHB SOL 2/3-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I HATCHB TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I LIFTB LUNA 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I LIFTB SOL 4/5-Doors
+Model_?TOYOTA Corolla 1.4 16V VVT I LIFTB TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.4 VVTI  (Nw type) 4/5-Doors
+Model_?TOYOTA Corolla 1.4 VVTI Linea Terra 2/3-Doors
+Model_?TOYOTA Corolla 1.4-16v VVT-i Linea Terra Comfort NIEUW AIRCO 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V HATCHB LINEA TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V HATCHB S 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V LIFTB LINEA LUNA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V LIFTB LINEA TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 3DR SOL 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 3DR TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 3DR TERRA COMFORT 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR SOL 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR SOL AUT4 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA AUT4 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA COMF AUT 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I 5DR TERRA COMFORT 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB G6 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB G6 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB SOL 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA AUT4 2/3-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I LIFTB LUNA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I LIFTB SOL 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I LIFTB TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA AUT4 4/5-Doors
+Model_?TOYOTA Corolla 1.6 16V VVT I WAGON TERRA Stationwagen
+Model_?TOYOTA Corolla 1.6 16v Linea Luna Stationwagen
+Model_?TOYOTA Corolla 1.6 16v VVTi Linea Sol 4/5-Doors
+Model_?TOYOTA Corolla 1.6 HB LINEA TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.6 LB LINEA SOL 4/5-Doors
+Model_?TOYOTA Corolla 1.6 SDN LINEA SOL 4/5-Doors
+Model_?TOYOTA Corolla 1.6 SDN LINEA TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.6 Terra LB Comf. 4/5-Doors
+Model_?TOYOTA Corolla 1.6 VVT-i Linea Sol 4/5-Doors
+Model_?TOYOTA Corolla 1.6 VVT-i Linea Terra Comfort 2/3-Doors
+Model_?TOYOTA Corolla 1.6 VVTI Linea Terra Comfort 2/3-Doors
+Model_?TOYOTA Corolla 1.6 VVTI Linea Terra liftback 4/5-Doors
+Model_?TOYOTA Corolla 1.6 VVTi Terra Comfort 4/5-Doors
+Model_?TOYOTA Corolla 1.6 terra comfort 5drs airco 4/5-Doors
+Model_?TOYOTA Corolla 1.8 16V VVTLI 3DR T SPORT 2/3-Doors
+Model_?TOYOTA Corolla 1.8 VVTL-i T-Sport 3-Drs 4/5-Doors
+Model_?TOYOTA Corolla 1.9 D HATCHB SOL 2/3-Doors
+Model_?TOYOTA Corolla 1.9 D HATCHB TERRA 2/3-Doors
+Model_?TOYOTA Corolla 1.9 D LIFTB TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1.9 D SEDAN TERRA 4/5-Doors
+Model_?TOYOTA Corolla 1800 T SPORT VVT I 2/3-Doors
+Model_?TOYOTA Corolla 2.0 D4D 90 3DR SOL BNS 2/3-Doors
+Model_?TOYOTA Corolla 2.0 D4D 90 3DR TERRA 2/3-Doors
+Model_?TOYOTA Corolla 2.0 D4D 90 5DR SOL 4/5-Doors
+Model_?TOYOTA Corolla 2.0 D4D 90 5DR TERRA COMFORT 4/5-Doors
+Model_?TOYOTA Corolla 2.0 D4D HATCHB TERRA 2/3-Doors
+Model_?TOYOTA Corolla 2.0 D4D Linea Terra Comfort 4/5-Doors
+Model_?TOYOTA Corolla 2.0 DSL HATCHB LINEA TERRA 2/3-Doors
+Model_?TOYOTA Corolla LIFTBACK 1.4 VVT-i LINEA TERRA 4/5-Doors
+Model_?TOYOTA Corolla LIFTBACK 1.6 Linea terra 4/5-Doors
+Model_?TOYOTA Corolla VERSO 2.0 D4D LINEA SOL MPV
+Model_?TOYOTA Corolla VERSO 2.0 D4D SOL (7) BNS MPV
+Model_TOYOTA Corolla 
+Model_TOYOTA Corolla ! 1.6-16v vvt-i sol airco sedan 4/5-Doors
+Model_TOYOTA Corolla 1 6-16v VVT-i Linea Terra Comfort Airco 5drs 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB G6 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA LUNA 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA LUNA AUT3 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB LINEA TERRA AUT3 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V HATCHB S 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V L. TERRA COMFORT 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V LB Linea Luna 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V LIFTB G6 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V LIFTB LINEA LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V LIFTB LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V LIFTB LINEA TERRA AUT3 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V Linea Terra 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V Linea Terra Liftb 2/3-Doors
+Model_TOYOTA Corolla 1.3 16V Linea Terra Liftb 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V SEDAN LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V SEDAN LINEA TERRA AUT3 4/5-Doors
+Model_TOYOTA Corolla 1.3 16V WAGON LINEA LUNA Stationwagen
+Model_TOYOTA Corolla 1.3 16V WAGON LINEA TERRA Stationwagen
+Model_TOYOTA Corolla 1.3 16v linea terra 
+Model_TOYOTA Corolla 1.3 3D Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.3 G6 liftback 4/5-Doors
+Model_TOYOTA Corolla 1.3 HB LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.3 HB LINEA TERRA AUT 2/3-Doors
+Model_TOYOTA Corolla 1.3 HB LINEA TERRA AUT Anders
+Model_TOYOTA Corolla 1.3 HB Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.3 Hatchback 2/3-Doors
+Model_TOYOTA Corolla 1.3 I LUNA 2/3-Doors
+Model_TOYOTA Corolla 1.3 LB LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.3 LIN. Terra 2/3-Doors
+Model_TOYOTA Corolla 1.3 Linea Luna Hatchback 2/3-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra 3 drs 2/3-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra 4/5-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra Comfort 4/5-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra Hatchback 2/3-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra sedan 4/5-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra sedan Comf. 4/5-Doors
+Model_TOYOTA Corolla 1.3 Linea Terra wagon Stationwagen
+Model_TOYOTA Corolla 1.3 SDN LINEA TERRA AUT 4/5-Doors
+Model_TOYOTA Corolla 1.3-16V Luna 2/3-Doors
+Model_TOYOTA Corolla 1.3I LINEATERRA 2/3-Doors
+Model_TOYOTA Corolla 1.3i LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.3i-16v Linea Terra 5d 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V 5DR TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 3DR 2/3-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 3DR TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 3DR TERRA COMFORT 2/3-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR LUNA BNS 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR SOL 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I 5DR TERRA COMFORT 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I HATCHB SOL 2/3-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I HATCHB TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I LIFTB LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I LIFTB SOL 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I LIFTB TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.4 16V VVT I SEDAN TERRA COMF 4/5-Doors
+Model_TOYOTA Corolla 1.4 HB LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.4 HB Terra 2/3-Doors
+Model_TOYOTA Corolla 1.4 LB LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.4 VVT-i Linea Luna liftback 4/5-Doors
+Model_TOYOTA Corolla 1.4 VVT-i Linea Sol HB 2/3-Doors
+Model_TOYOTA Corolla 1.4 VVT-i Sol 2/3-Doors
+Model_TOYOTA Corolla 1.4 VVT-i Terra 2/3-Doors
+Model_TOYOTA Corolla 1.4 VVTI L.Terra HB 4/5-Doors
+Model_TOYOTA Corolla 1.4 VVTI LB 4/5-Doors
+Model_TOYOTA Corolla 1.4 VVTI Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.4-16v VVT-i Linea Terra Comfort NIEUW AIRCO 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V G6 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB G6 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB G6 R 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB GTSI 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA LUNA 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA LUNA AUT4 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB LINEA TERRA AUT4 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHB S 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V HATCHBACK LINEA LUNA 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA LUNA AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V LIFTB LINEA TERRA AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V LIFTBACK LINEA LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V S-uitvoering 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA LUNA AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V SEDAN LINEA TERRA AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR SOL 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR SOL AUT4 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR TERRA COMF AUT 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 3DR TERRA COMFORT 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR EXEC 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR EXEC BNS 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR SOL 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR SOL AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR SOL BNS 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I 5DR TERRA COMFORT 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB G6 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB G6 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB SOL 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB SOL AUT4 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I HATCHB TERRA AUT4 2/3-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB LUNA AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB SOL 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB SOL AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I LIFTB TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN SOL 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN SOL AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN SOL BNS AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA AUT4 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I SEDAN TERRA COMF 4/5-Doors
+Model_TOYOTA Corolla 1.6 16V VVT I WAGON BLUE Stationwagen
+Model_TOYOTA Corolla 1.6 16V VVT I WAGON TERRA Stationwagen
+Model_TOYOTA Corolla 1.6 16V WAGON LINEA LUNA Stationwagen
+Model_TOYOTA Corolla 1.6 16V WAGON LINEA TERRA AUT4 Stationwagen
+Model_TOYOTA Corolla 1.6 16V WAGON LINEA TERRA Stationwagen
+Model_TOYOTA Corolla 1.6 16v L.SOL 2/3-Doors
+Model_TOYOTA Corolla 1.6 16v Liftback Linea Luna 4/5-Doors
+Model_TOYOTA Corolla 1.6 16v Liftback Linea So 4/5-Doors
+Model_TOYOTA Corolla 1.6 16v Liftback Linea Sol 4/5-Doors
+Model_TOYOTA Corolla 1.6 16v Liftback Linea Terra 4/5-Doors
+Model_TOYOTA Corolla 1.6 16v Linea Luna 2/3-Doors
+Model_TOYOTA Corolla 1.6 16v Linea Terra 4/5-Doors
+Model_TOYOTA Corolla 1.6 16v TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 16v VVT-i Linea Sol 2/3-Doors
+Model_TOYOTA Corolla 1.6 16v VVTi Terra Comfort 2/3-Doors
+Model_TOYOTA Corolla 1.6 16v VVTi Terra Comfort 4/5-Doors
+Model_TOYOTA Corolla 1.6 3D Terra/Comf. 2/3-Doors
+Model_TOYOTA Corolla 1.6 4/5-Doors
+Model_TOYOTA Corolla 1.6 5drs 1 4/5-Doors
+Model_TOYOTA Corolla 1.6 G6 HB 2/3-Doors
+Model_TOYOTA Corolla 1.6 G6-R 2/3-Doors
+Model_TOYOTA Corolla 1.6 G6R HB 2/3-Doors
+Model_TOYOTA Corolla 1.6 GL LB 4/5-Doors
+Model_TOYOTA Corolla 1.6 GTSi HB 2/3-Doors
+Model_TOYOTA Corolla 1.6 GTSi HB 4/5-Doors
+Model_TOYOTA Corolla 1.6 HATCHBACK 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB LINEA LUNA 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB LINEA LUNA AUT 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB LINEA SOL 4/5-Doors
+Model_TOYOTA Corolla 1.6 HB LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB Linea Luna 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB SOL 2/3-Doors
+Model_TOYOTA Corolla 1.6 HB Terra 4/5-Doors
+Model_TOYOTA Corolla 1.6 Hatchback 2/3-Doors
+Model_TOYOTA Corolla 1.6 I lb luna 4/5-Doors
+Model_TOYOTA Corolla 1.6 LB *G3* AIRCO 4/5-Doors
+Model_TOYOTA Corolla 1.6 LB 4/5-Doors
+Model_TOYOTA Corolla 1.6 LB LINEA LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.6 LB LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 LB Linea Terra 4/5-Doors
+Model_TOYOTA Corolla 1.6 LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 LL HB 4/5-Doors
+Model_TOYOTA Corolla 1.6 Lin.Terra Aut. 2/3-Doors
+Model_TOYOTA Corolla 1.6 Lin.Terra Aut. 4/5-Doors
+Model_TOYOTA Corolla 1.6 Linea Luna 2/3-Doors
+Model_TOYOTA Corolla 1.6 Linea Luna 4/5-Doors
+Model_TOYOTA Corolla 1.6 Linea Luna Aut. 4/5-Doors
+Model_TOYOTA Corolla 1.6 Linea Luna Wagon Stationwagen
+Model_TOYOTA Corolla 1.6 Linea Terra / Keuze uit 700 occasions 2/3-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort 2/3-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort 4/5-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort H 2/3-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra Comfort HB 2/3-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra HB 2/3-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra LB 4/5-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra Sd 4/5-Doors
+Model_TOYOTA Corolla 1.6 Linea Terra Sedan 4/5-Doors
+Model_TOYOTA Corolla 1.6 Luna LB 4/5-Doors
+Model_TOYOTA Corolla 1.6 Luna Liftback 4/5-Doors
+Model_TOYOTA Corolla 1.6 SD TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 SDN LINEA SOL 4/5-Doors
+Model_TOYOTA Corolla 1.6 SDN LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 SDN LINEA TERRA AUT 4/5-Doors
+Model_TOYOTA Corolla 1.6 Terra 5-Doors Liftback 4/5-Doors
+Model_TOYOTA Corolla 1.6 Terra HB 2/3-Doors
+Model_TOYOTA Corolla 1.6 Terra LB 4/5-Doors
+Model_TOYOTA Corolla 1.6 Terra Stationwagen
+Model_TOYOTA Corolla 1.6 VVT-I 5DR LINEA SOL 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVT-I 5DR LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVT-i L. Sol Wagon Stationwagen
+Model_TOYOTA Corolla 1.6 VVT-i Linea Sol 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVT-i Linea Terra Comfort 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVTI Linea Sol Sedan 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVTI Linea Terra Comfort 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVTI Linea Terra liftback 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVTi Linea Luna 2/3-Doors
+Model_TOYOTA Corolla 1.6 VVTi Linea Luna 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVTi Linea Luna Lift 4/5-Doors
+Model_TOYOTA Corolla 1.6 VVTi Linea terra 2/3-Doors
+Model_TOYOTA Corolla 1.6 VVTi Linea terra 4/5-Doors
+Model_TOYOTA Corolla 1.6 WGN LINEA TERRA Stationwagen
+Model_TOYOTA Corolla 1.6 lb aut 4/5-Doors
+Model_TOYOTA Corolla 1.6 linea terra 4/5-Doors
+Model_TOYOTA Corolla 1.6 sol lb 4/5-Doors
+Model_TOYOTA Corolla 1.6 station 1 Stationwagen
+Model_TOYOTA Corolla 1.6 vvt-i nw model comfort airco 5drs 4/5-Doors
+Model_TOYOTA Corolla 1.6-16v Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.6-16v Linea Terra LB 4/5-Doors
+Model_TOYOTA Corolla 1.6-16v VVT-i Executive B.edition 4/5-Doors
+Model_TOYOTA Corolla 1.6-16v VVT-i Linea Terra Comfort AIRCO NIEUW 5DRS 4/5-Doors
+Model_TOYOTA Corolla 1.6-16v VVT-i Linea Terra Comfort NIEUW AIRCO 5drs 4/5-Doors
+Model_TOYOTA Corolla 1.6HB 2/3-Doors
+Model_TOYOTA Corolla 1.6I LIFTBACK 4/5-Doors
+Model_TOYOTA Corolla 1.6I Luna liftback 4/5-Doors
+Model_TOYOTA Corolla 1.6i 16V VVT I SOL + Navigatie 4/5-Doors
+Model_TOYOTA Corolla 1.6i Linea Terra HB 2/3-Doors
+Model_TOYOTA Corolla 1.6i-16 SPORTS TC 2/3-Doors
+Model_TOYOTA Corolla 1.6v VVT-i Linea Sol 4/5-Doors
+Model_TOYOTA Corolla 1.8 16V VVTLI 3DR T SPORT 2/3-Doors
+Model_TOYOTA Corolla 1.8 16V VVTLI 3DR T SPORT BNS 2/3-Doors
+Model_TOYOTA Corolla 1.8 16V VVTLI 5DR T SPORT 4/5-Doors
+Model_TOYOTA Corolla 1.8 VVTL-i T-Sport 3-Drs 2/3-Doors
+Model_TOYOTA Corolla 1.8 VVTL-i T-Sport 4/5-Doors
+Model_TOYOTA Corolla 1.8D 4/5-Doors
+Model_TOYOTA Corolla 1.8D Stationwagen
+Model_TOYOTA Corolla 1.9 D HATCHB SOL 2/3-Doors
+Model_TOYOTA Corolla 1.9 D HATCHB TERRA 2/3-Doors
+Model_TOYOTA Corolla 1.9 D HB SOL 2/3-Doors
+Model_TOYOTA Corolla 1.9 D LB LINEA SOL 4/5-Doors
+Model_TOYOTA Corolla 1.9 D LIFTB LUNA 4/5-Doors
+Model_TOYOTA Corolla 1.9 D LIFTB TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.9 D Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 1.9 D SEDAN TERRA 4/5-Doors
+Model_TOYOTA Corolla 1.9 D Sedan 4/5-Doors
+Model_TOYOTA Corolla 1.9 D WAGON TERRA Stationwagen
+Model_TOYOTA Corolla 1.9 D WGN LINEA TERRA Stationwagen
+Model_TOYOTA Corolla 1.9 D Wagon Stationwagen
+Model_TOYOTA Corolla 19D LB Linea Terra 4/5-Doors
+Model_TOYOTA Corolla 2.0 D 4D Linea Sol 3 Doors 2/3-Doors
+Model_TOYOTA Corolla 2.0 D Linea Terra 3d 2/3-Doors
+Model_TOYOTA Corolla 2.0 D Linea Terra Liftback 4/5-Doors
+Model_TOYOTA Corolla 2.0 D Linea luna Wagon Stationwagen
+Model_TOYOTA Corolla 2.0 D4D 110 3DR SOL 2/3-Doors
+Model_TOYOTA Corolla 2.0 D4D 110 5DR EXEC BNS 4/5-Doors
+Model_TOYOTA Corolla 2.0 D4D 110 5DR SOL 4/5-Doors
+Model_TOYOTA Corolla 2.0 D4D 116 5DR LUNA 4/5-Doors
+Model_TOYOTA Corolla 2.0 D4D 90 3DR TERRA 2/3-Doors
+Model_TOYOTA Corolla 2.0 D4D 90 3DR TERRA COMF BNS 2/3-Doors
+Model_TOYOTA Corolla 2.0 D4D 90 5DR TERRA 4/5-Doors
+Model_TOYOTA Corolla 2.0 D4D 90 5DR TERRA COMFORT 4/5-Doors
+Model_TOYOTA Corolla 2.0 D4D 90 WAGON SOL Stationwagen
+Model_TOYOTA Corolla 2.0 D4D HATCHB SOL 2/3-Doors
+Model_TOYOTA Corolla 2.0 D4D HATCHB TERRA 2/3-Doors
+Model_TOYOTA Corolla 2.0 D4D LIFTB SOL 4/5-Doors
+Model_TOYOTA Corolla 2.0 D4D Linea Sol 3 Doors 2/3-Doors
+Model_TOYOTA Corolla 2.0 D4D SEDAN SOL 4/5-Doors
+Model_TOYOTA Corolla 2.0 DSL 
+Model_TOYOTA Corolla 2.0 DSL HATCHB LINEA LUNA 2/3-Doors
+Model_TOYOTA Corolla 2.0 DSL HATCHB LINEA TERRA 2/3-Doors
+Model_TOYOTA Corolla 2.0 DSL LIFTB LINEA LUNA 4/5-Doors
+Model_TOYOTA Corolla 2.0 DSL LIFTB LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 2.0 DSL SEDAN LINEA TERRA 4/5-Doors
+Model_TOYOTA Corolla 2.0 DSL WAGON LINEA TERRA COMM Anders
+Model_TOYOTA Corolla 2.0 DSL WAGON LINEA TERRA Stationwagen
+Model_TOYOTA Corolla 2.0 LB LINEA TERRA D 4/5-Doors
+Model_TOYOTA Corolla 2.0 LB LINEA TERRA DSL 4/5-Doors
+Model_TOYOTA Corolla 2.0 SDN LINEA TERRA DSL 4/5-Doors
+Model_TOYOTA Corolla 2.0 ST WGN LINEA TERRA DSL Stationwagen
+Model_TOYOTA Corolla 2.0 d HB Diesel 2/3-Doors
+Model_TOYOTA Corolla 2.0D 4/5-Doors
+Model_TOYOTA Corolla 2.0D LINEA TERRA+airco 2/3-Doors
+Model_TOYOTA Corolla 2.0D Linea Terra 2/3-Doors
+Model_TOYOTA Corolla 2.0D TERRA LIFTBACK 4/5-Doors
+Model_TOYOTA Corolla 2.0D XL Sedan 4/5-Doors
+Model_TOYOTA Corolla 2.0diesel Stationwagen
+Model_TOYOTA Corolla 2/3-Doors
+Model_TOYOTA Corolla 3drs 13i-16V 2/3-Doors
+Model_TOYOTA Corolla Hatchback 1.6 Terra Comfort 2/3-Doors
+Model_TOYOTA Corolla LIFTBACK 1.3i Linea Luna Liftback 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.3i Linea Terra Liftback 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.4 16V VVTI TERRA 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea Luna Liftback 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea Sol 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea Terra Liftback 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.6 Linea terra 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.6-16v Linea Luna 2/3-Doors
+Model_TOYOTA Corolla LIFTBACK 1.6-16v Linea Luna 4/5-Doors
+Model_TOYOTA Corolla LIFTBACK 1.9 D Linea Terra 4/5-Doors
+Model_TOYOTA Corolla Liftback 1.6 VVTI 4/5-Doors
+Model_TOYOTA Corolla Linea Luna 1.6i 16V 2/3-Doors
+Model_TOYOTA Corolla Luna 5drs D4D116 PK 4/5-Doors
+Model_TOYOTA Corolla Sw 20D Linea Terra Stationwagen
+Model_TOYOTA Corolla VERSO 2.0 D4D LINEA SOL MPV
+Model_TOYOTA Corolla VERSO 2.0 D4D SOL (7) MPV
+Fuel_Type_Diesel
+Fuel_Type_Petrol
