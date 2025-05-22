@@ -1,5 +1,7 @@
 const
 Age_08_04
+Mfg_Month
+Mfg_Year
 KM
 HP
 Met_Color
@@ -22,6 +24,7 @@ Power_Steering
 Radio
 Mistlamps
 Sport_Model
+Backseat_Divider
 Metallic_Rim
 Tow_Bar
 Airbag_Count

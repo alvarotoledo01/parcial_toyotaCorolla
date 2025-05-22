@@ -1,5 +1,7 @@
 const
 Age_08_04
+Mfg_Month
+Mfg_Year
 KM
 HP
 Met_Color
@@ -10,6 +12,7 @@ Gears
 Quarterly_Tax
 Weight
 Mfr_Guarantee
+BOVAG_Guarantee
 Guarantee_Period
 ABS
 Airco
@@ -22,6 +25,7 @@ Power_Steering
 Radio
 Mistlamps
 Sport_Model
+Backseat_Divider
 Metallic_Rim
 Tow_Bar
 Airbag_Count
