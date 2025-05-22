@@ -1,5 +1,4 @@
 const
-Id
 Age_08_04
 Mfg_Month
 Mfg_Year

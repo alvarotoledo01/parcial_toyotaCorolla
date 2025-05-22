@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/576424483513881687/c3896685ec87485c8dfd43a5ac52748c/artifacts
+end_time: 1747919031878
+entry_point_name: ''
+experiment_id: '576424483513881687'
+lifecycle_stage: active
+run_id: c3896685ec87485c8dfd43a5ac52748c
+run_name: ols_model_run
+run_uuid: c3896685ec87485c8dfd43a5ac52748c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747919030856
+status: 3
+tags: []
+user_id: tobiaspazposse
