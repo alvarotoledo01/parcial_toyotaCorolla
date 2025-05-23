@@ -12,4 +12,7 @@ Automatic_airco
 Boardcomputer
 CD_Player
 Powered_Windows
+Mistlamps
 Airbag_Count
+Fuel_Type_Diesel
+Fuel_Type_Petrol

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/576424483513881687/44bcfae44a764446b7c0552e1e613f0f/artifacts
+deleted_time: 1748039436462
+end_time: null
+entry_point_name: ''
+experiment_id: '576424483513881687'
+lifecycle_stage: deleted
+run_id: 44bcfae44a764446b7c0552e1e613f0f
+run_name: abundant-crane-650
+run_uuid: 44bcfae44a764446b7c0552e1e613f0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748039425409
+status: 1
+tags: []
+user_id: Usuario
