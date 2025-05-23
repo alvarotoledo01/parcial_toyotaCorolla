@@ -13,6 +13,7 @@ Boardcomputer
 CD_Player
 Powered_Windows
 Mistlamps
+Sport_Model
 Airbag_Count
 Fuel_Type_Diesel
 Fuel_Type_Petrol

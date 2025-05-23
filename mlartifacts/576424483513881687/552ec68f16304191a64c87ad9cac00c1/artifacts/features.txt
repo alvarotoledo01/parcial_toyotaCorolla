@@ -4,6 +4,7 @@ KM
 HP
 cc
 Doors
+Gears
 Quarterly_Tax
 Weight
 ABS
@@ -12,7 +13,12 @@ Automatic_airco
 Boardcomputer
 CD_Player
 Powered_Windows
+Power_Steering
+Radio
 Mistlamps
+Sport_Model
+Metallic_Rim
+Tow_Bar
 Airbag_Count
 Fuel_Type_Diesel
 Fuel_Type_Petrol
