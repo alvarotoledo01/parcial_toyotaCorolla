@@ -80,5 +80,5 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
         mlflow.log_artifact(correlation_path, "eda")
         mlflow.log_artifact(pairplot_path, "eda")
         for feature_plot in feature_plots:
-            mlflow.log_artifact(feature_plot, "eda")
+            mlflow.log_artifact(feature_plot, "eda/features")
         context.log.info("All artifacts logged successfully.")
