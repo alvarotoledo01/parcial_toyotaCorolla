@@ -6,11 +6,20 @@ from dagster_project.assets import (
     load_data,
     model_training,
     preprocessing,
+    residuals,
     setup,
 )  # noqa: TID252
 
 all_assets = load_assets_from_modules(
-    [load_data, setup, preprocessing, eda, feature_engineering, model_training]
+    [
+        load_data,
+        setup,
+        preprocessing,
+        eda,
+        feature_engineering,
+        model_training,
+        residuals,
+    ]
 )
 
 defs = Definitions(
