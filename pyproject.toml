@@ -14,3 +14,7 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.dagster]
+module_name = "dagster_project.definitions"
+code_location_name = "dagster_project"
