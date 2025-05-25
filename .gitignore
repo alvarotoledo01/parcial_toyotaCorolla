@@ -80,3 +80,6 @@ dagster_webserver/
 dagster_grpc/
 .dagster/
 .tmp_dagster*/
+
+# Environment variables
+.env
