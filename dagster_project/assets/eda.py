@@ -20,7 +20,7 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
     # corelation matrix
     context.log.info("Generating correlation matrix")
     correlation_path = os.path.join(eda_folder, "correlation_matrix.png")
-    plt.figure(figsize=(10, 8))
+    plt.figure(figsize=(20, 16))
     sns.heatmap(
         df.corr(),
         annot=True,
@@ -28,9 +28,12 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
         cmap="coolwarm",
         cbar_kws={"shrink": 0.75},
         linewidths=0.5,
-        annot_kws={"size": 10},
+        annot_kws={"size": 8},
     )
     plt.title("Correlation Matrix")
+    plt.xticks(rotation=45, ha="right", fontsize=8)
+    plt.yticks(fontsize=8)
+    plt.tight_layout()
     plt.savefig(correlation_path)
     plt.close()
 
