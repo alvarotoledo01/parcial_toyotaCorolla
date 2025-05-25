@@ -14,8 +14,9 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
 
     # df describe
     context.log.info("Generating df describe")
-    describe_path = os.path.join(eda_folder, "df_describe.csv")
-    df.describe().to_csv(describe_path)
+    describe_path = os.path.join(eda_folder, "df_describe.txt")
+    with open(describe_path, "w") as f:
+        f.write(df.describe().round(2).to_string())
 
     # corelation matrix
     context.log.info("Generating correlation matrix")
