@@ -13,10 +13,12 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
     os.makedirs(eda_folder, exist_ok=True)
 
     # df describe
+    context.log.info("Generating df describe")
     describe_path = os.path.join(eda_folder, "df_describe.csv")
     df.describe().to_csv(describe_path)
 
     # corelation matrix
+    context.log.info("Generating correlation matrix")
     correlation_path = os.path.join(eda_folder, "correlation_matrix.png")
     plt.figure(figsize=(10, 8))
     sns.heatmap(
@@ -33,11 +35,13 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
     plt.close()
 
     # pairplot
+    context.log.info("Generating pairplot")
     pairplot_path = os.path.join(eda_folder, "pairplot.png")
     sns.pairplot(df, diag_kind="kde").savefig(pairplot_path)
     plt.close()
 
     # feature plots
+    context.log.info("Generating feature plots")
     numerical_features = df.select_dtypes(include=["int64", "float64"]).columns
     features_folder = os.path.join(eda_folder, "features")
     os.makedirs(features_folder, exist_ok=True)
@@ -77,3 +81,4 @@ def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
         mlflow.log_artifact(pairplot_path, "eda")
         for feature_plot in feature_plots:
             mlflow.log_artifact(feature_plot, "eda")
+        context.log.info("All artifacts logged successfully.")
