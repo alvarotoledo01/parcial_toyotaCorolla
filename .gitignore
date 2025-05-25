@@ -65,3 +65,7 @@ data/
 
 # Otros
 *.sqlite
+
+# mlflow
+mlruns/
+mlartifacts/
