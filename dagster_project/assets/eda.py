@@ -6,9 +6,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-@asset(deps=["preprocess_data", "setup_mlflow"])
-def eda_report(context, preprocess_data: pd.DataFrame, setup_mlflow: str):
-    df = preprocess_data.copy()
+@asset(deps=["feature_engineering", "setup_mlflow"])
+def eda_report(context, feature_engineering: pd.DataFrame, setup_mlflow: str):
+    df = feature_engineering.copy()
     eda_folder = os.path.join("mlartifacts", "eda")
     os.makedirs(eda_folder, exist_ok=True)
 

@@ -1,11 +1,11 @@
-from dagster import asset
+from dagster import AssetExecutionContext, asset
 import mlflow
 import pandas as pd
 
 
 @asset(deps=["load_toyota_data", "setup_mlflow"])
 def preprocess_data(
-    context, load_toyota_data: pd.DataFrame, setup_mlflow: str
+    context: AssetExecutionContext, load_toyota_data: pd.DataFrame, setup_mlflow: str
 ) -> pd.DataFrame:
     df = load_toyota_data.copy()
     original_shape = df.shape
@@ -13,12 +13,23 @@ def preprocess_data(
     # Eliminar duplicados
     df = df.drop_duplicates()
 
-    # Eliminar columnas innecesarias
-    df = df.drop(columns=["Model", "Cylinders"], axis=1)
-
     # One-hot encoding de variables categóricas
-    categorial_cols = df.select_dtypes(include=["object"]).columns.tolist()
-    df = pd.get_dummies(df, columns=categorial_cols, drop_first=True)
+    context.log.info("Realizando one-hot encoding de variables categóricas")
+    columns_to_encode = ["Fuel_Type"]
+    df = pd.get_dummies(df, columns=columns_to_encode, drop_first=True)
+
+    # Forzar columnas numérias
+    context.log.info("Forzando columnas numéricas")
+    bool_cols = df.select_dtypes(include="bool").columns
+    df[bool_cols] = df[bool_cols].astype(int)
+    df = df.apply(pd.to_numeric, errors="coerce")
+    context.log.info(df.dtypes)
+
+    # Reordenar columnas
+    cols = list(df.columns)
+    cols.remove("Price")
+    cols.append("Price")
+    df = df[cols]
 
     # Logging en MLflow
     with mlflow.start_run(run_id=setup_mlflow):
