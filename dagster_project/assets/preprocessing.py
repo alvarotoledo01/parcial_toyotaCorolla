@@ -14,7 +14,7 @@ def preprocess_data(
     df = df.drop_duplicates()
 
     # Eliminar columnas innecesarias
-    df = df.drop(columns=["Model"], axis=1)
+    df = df.drop(columns=["Model", "Cylinders"], axis=1)
 
     # One-hot encoding de variables categóricas
     categorial_cols = df.select_dtypes(include=["object"]).columns.tolist()
