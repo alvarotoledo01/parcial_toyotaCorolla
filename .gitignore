@@ -66,6 +66,16 @@ data/
 # Otros
 *.sqlite
 
-# mlflow
-mlruns/
+# MLflow
 mlartifacts/
+mlruns/
+
+# Dagster internals
+dagster-workspace/
+dagstermill/
+dagster_outputs/
+dagster_instance/
+dagster_subprocesses/
+dagster_webserver/
+dagster_grpc/
+.dagster/
