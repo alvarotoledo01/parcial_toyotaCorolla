@@ -32,8 +32,8 @@ def eda_report(context, feature_engineering: pd.DataFrame, setup_mlflow: str):
         annot_kws={"size": 8},
     )
     plt.title("Correlation Matrix")
-    plt.xticks(rotation=45, ha="right", fontsize=8)
-    plt.yticks(fontsize=8)
+    plt.xticks(rotation=45, ha="right", fontsize=12)
+    plt.yticks(fontsize=12)
     plt.tight_layout()
     plt.savefig(correlation_path)
     plt.close()
