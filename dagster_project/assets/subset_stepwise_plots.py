@@ -5,11 +5,10 @@ from sklearn.model_selection import KFold
 from dagster import AssetExecutionContext, asset
 import mlflow
 
+
 @asset(deps=["feature_engineering", "setup_mlflow"])
 def subset_stepwise_plots(
-    context: AssetExecutionContext,
-    feature_engineering,
-    setup_mlflow: str
+    context: AssetExecutionContext, feature_engineering, setup_mlflow: str
 ) -> bool:
     df = feature_engineering.copy()
     y = df["Price"].values
@@ -21,17 +20,21 @@ def subset_stepwise_plots(
 
     # Best Subset CV-RMSE
     rmse_best = []
-    for k in range(1, p+1):
+    for k in range(1, p + 1):
         errs = []
         for ti, vi in kf.split(X):
             best = max(
                 itertools.combinations(range(p), k),
-                key=lambda idxs: sm.OLS(y[ti], sm.add_constant(X[ti][:, idxs])).fit().rsquared_adj
+                key=lambda idxs: sm.OLS(y[ti], sm.add_constant(X[ti][:, idxs]))
+                .fit()
+                .rsquared_adj,
             )
-            pred = sm.OLS(y[ti], sm.add_constant(X[ti][:, best])).fit().predict(
-                sm.add_constant(X[vi][:, best])
+            pred = (
+                sm.OLS(y[ti], sm.add_constant(X[ti][:, best]))
+                .fit()
+                .predict(sm.add_constant(X[vi][:, best]))
             )
-            errs.append((y[vi] - pred)**2)
+            errs.append((y[vi] - pred) ** 2)
         rmse_best.append(np.sqrt(np.mean(np.hstack(errs))))
 
     # Stepwise Forward CV-RMSE
@@ -42,7 +45,9 @@ def subset_stepwise_plots(
             errs = []
             for ti, vi in kf.split(X):
                 m = sm.OLS(y[ti], sm.add_constant(X[ti][:, [*included, j]])).fit()
-                errs.append((y[vi] - m.predict(sm.add_constant(X[vi][:, [*included, j]])))**2)
+                errs.append(
+                    (y[vi] - m.predict(sm.add_constant(X[vi][:, [*included, j]]))) ** 2
+                )
             err = np.mean(np.hstack(errs))
             if err < best_err:
                 best_err, best_j = err, j
@@ -55,7 +60,7 @@ def subset_stepwise_plots(
 
     # Graficar Best Subset
     plt.figure(figsize=(8, 6))
-    plt.plot(range(1, p+1), rmse_best, marker="o")
+    plt.plot(range(1, p + 1), rmse_best, marker="o")
     plt.title("Best Subset CV-RMSE")
     plt.xlabel("Número de predictores (k)")
     plt.ylabel("RMSE")
@@ -66,7 +71,7 @@ def subset_stepwise_plots(
 
     # Graficar Stepwise Forward
     plt.figure(figsize=(8, 6))
-    plt.plot(range(1, len(rmse_fw)+1), rmse_fw, marker="o", color="green")
+    plt.plot(range(1, len(rmse_fw) + 1), rmse_fw, marker="o", color="green")
     plt.title("Stepwise Forward CV-RMSE")
     plt.xlabel("Número de variables incluidas")
     plt.ylabel("RMSE")

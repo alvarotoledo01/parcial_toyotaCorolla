@@ -9,14 +9,14 @@ import numpy as np
 from statsmodels.regression.linear_model import RegressionResultsWrapper
 
 
-@asset(deps=["train_model", "feature_engineering", "setup_mlflow"])
+@asset(deps=["train_model", "select_features", "setup_mlflow"])
 def residual_analysis(
     context: AssetExecutionContext,
     train_model: RegressionResultsWrapper,
-    feature_engineering: pd.DataFrame,
+    select_features: pd.DataFrame,
     setup_mlflow: str,
 ):
-    df = feature_engineering.copy()
+    df = select_features.copy()
     model = train_model
     run_id = setup_mlflow
 

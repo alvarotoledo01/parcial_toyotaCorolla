@@ -7,11 +7,10 @@ from sklearn.linear_model import LassoCV
 from sklearn.model_selection import KFold
 import pandas as pd
 
+
 @asset(deps=["feature_engineering", "setup_mlflow"])
 def train_lasso_cv(
-    context: AssetExecutionContext,
-    feature_engineering: pd.DataFrame,
-    setup_mlflow: str
+    context: AssetExecutionContext, feature_engineering: pd.DataFrame, setup_mlflow: str
 ) -> dict:
     df = feature_engineering.copy()
     run_id = setup_mlflow
@@ -24,8 +23,8 @@ def train_lasso_cv(
     train_mse, test_mse = [], []
     for train_i, test_i in kf.split(X):
         lasso.set_params(alpha=lasso.alpha_).fit(X[train_i], y[train_i])
-        train_mse.append(((y[train_i] - lasso.predict(X[train_i]))**2).mean())
-        test_mse.append(((y[test_i] - lasso.predict(X[test_i]))**2).mean())
+        train_mse.append(((y[train_i] - lasso.predict(X[train_i])) ** 2).mean())
+        test_mse.append(((y[test_i] - lasso.predict(X[test_i])) ** 2).mean())
 
     out = os.path.join("mlartifacts", "lasso_cv")
     os.makedirs(out, exist_ok=True)
@@ -42,4 +41,8 @@ def train_lasso_cv(
     context.log.info(
         f"LassoCV α={lasso.alpha_} | train_mse={np.mean(train_mse):.3f} | test_mse={np.mean(test_mse):.3f}"
     )
-    return {"train_mse": np.mean(train_mse), "test_mse": np.mean(test_mse), "alpha": lasso.alpha_}
+    return {
+        "train_mse": np.mean(train_mse),
+        "test_mse": np.mean(test_mse),
+        "alpha": lasso.alpha_,
+    }

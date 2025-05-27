@@ -4,11 +4,10 @@ from sklearn.decomposition import PCA
 from dagster import AssetExecutionContext, asset
 import mlflow
 
+
 @asset(deps=["feature_engineering", "setup_mlflow"])
 def pca_plots(
-    context: AssetExecutionContext,
-    feature_engineering,
-    setup_mlflow: str
+    context: AssetExecutionContext, feature_engineering, setup_mlflow: str
 ) -> bool:
     df = feature_engineering.drop(columns=["Price"])
     X = df.values
@@ -20,7 +19,7 @@ def pca_plots(
     pca_full = PCA().fit(X)
     cum_var = pca_full.explained_variance_ratio_.cumsum()
     plt.figure(figsize=(8, 6))
-    plt.plot(range(1, len(cum_var)+1), cum_var, marker="o")
+    plt.plot(range(1, len(cum_var) + 1), cum_var, marker="o")
     plt.title("PCA – Varianza Acumulada")
     plt.xlabel("Número de componentes")
     plt.ylabel("Varianza Acumulada")
@@ -36,8 +35,21 @@ def pca_plots(
     plt.figure(figsize=(8, 8))
     plt.scatter(Z[:, 0], Z[:, 1], alpha=0.5)
     for i, var in enumerate(cols):
-        plt.arrow(0, 0, L[i, 0]*max(Z[:,0]), L[i, 1]*max(Z[:,1]), color="r", head_width=0.05)
-        plt.text(L[i,0]*max(Z[:,0])*1.1, L[i,1]*max(Z[:,1])*1.1, var, color="r", fontsize="small")
+        plt.arrow(
+            0,
+            0,
+            L[i, 0] * max(Z[:, 0]),
+            L[i, 1] * max(Z[:, 1]),
+            color="r",
+            head_width=0.05,
+        )
+        plt.text(
+            L[i, 0] * max(Z[:, 0]) * 1.1,
+            L[i, 1] * max(Z[:, 1]) * 1.1,
+            var,
+            color="r",
+            fontsize="small",
+        )
     plt.title("PCA Biplot")
     plt.grid(True)
     p2 = os.path.join(out, "biplot.png")
@@ -48,9 +60,9 @@ def pca_plots(
     plt.figure(figsize=(10, 6))
     idx = np.arange(len(cols))
     w = 0.35
-    plt.bar(idx, L[:,0], w, label="PC1")
-    plt.bar(idx+w, L[:,1], w, label="PC2")
-    plt.xticks(idx+w/2, cols, rotation=90, fontsize="small")
+    plt.bar(idx, L[:, 0], w, label="PC1")
+    plt.bar(idx + w, L[:, 1], w, label="PC2")
+    plt.xticks(idx + w / 2, cols, rotation=90, fontsize="small")
     plt.title("Loadings PC1 y PC2")
     plt.legend()
     plt.tight_layout()

@@ -5,11 +5,10 @@ from sklearn.model_selection import KFold, cross_val_score
 from dagster import AssetExecutionContext, asset
 import mlflow
 
+
 @asset(deps=["feature_engineering", "setup_mlflow"])
 def ridge_lasso_plots(
-    context: AssetExecutionContext,
-    feature_engineering,
-    setup_mlflow: str
+    context: AssetExecutionContext, feature_engineering, setup_mlflow: str
 ) -> bool:
     df = feature_engineering.copy()
     X = df.drop(columns=["Price"]).values
@@ -25,7 +24,9 @@ def ridge_lasso_plots(
             m.fit(X, y)
             coefs.append(m.coef_)
             cv_mse.append(
-                -cross_val_score(m, X, y, cv=kf, scoring="neg_mean_squared_error").mean()
+                -cross_val_score(
+                    m, X, y, cv=kf, scoring="neg_mean_squared_error"
+                ).mean()
             )
 
         out = os.path.join("mlartifacts", name)
