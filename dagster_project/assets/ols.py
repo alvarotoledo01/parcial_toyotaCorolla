@@ -8,8 +8,8 @@ import statsmodels.api as sm
 import numpy as np
 
 
-@asset(deps=["select_features", "setup_mlflow"])
-def train_model(
+@asset(deps=[])
+def train_ols(
     context: AssetExecutionContext, select_features: pd.DataFrame, setup_mlflow: str
 ):
     df = select_features.copy()
