@@ -8,11 +8,11 @@ import statsmodels.api as sm
 import numpy as np
 
 
-@asset(deps=["feature_engineering", "setup_mlflow"])
-def train_model(
-    context: AssetExecutionContext, feature_engineering: pd.DataFrame, setup_mlflow: str
+@asset(deps=[])
+def train_ols(
+    context: AssetExecutionContext, select_features: pd.DataFrame, setup_mlflow: str
 ):
-    df = feature_engineering.copy()
+    df = select_features.copy()
     run_id = setup_mlflow
 
     y = df["Price"]

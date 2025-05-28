@@ -83,3 +83,6 @@ dagster_grpc/
 
 # Environment variables
 .env
+
+# Outputs de notebooks como assets
+notebooks_outputs/
