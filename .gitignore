@@ -65,3 +65,24 @@ data/
 
 # Otros
 *.sqlite
+
+# MLflow
+mlartifacts/
+mlruns/
+
+# Dagster internals
+dagster-workspace/
+dagstermill/
+dagster_outputs/
+dagster_instance/
+dagster_subprocesses/
+dagster_webserver/
+dagster_grpc/
+.dagster/
+.tmp_dagster*/
+
+# Environment variables
+.env
+
+# Outputs de notebooks como assets
+notebooks_outputs/
