@@ -1,9 +1,18 @@
 from dagster import Definitions, load_assets_from_modules
 from dagstermill import ConfigurableLocalOutputNotebookIOManager
 
-from dagster_project.assets import raw_dataset, clean_data
+from dagster_project.assets import (
+    feature_selection,
+    lasso,
+    ols,
+    raw_dataset,
+    clean_data,
+    setup,
+)
 
-all_assets = load_assets_from_modules([raw_dataset, clean_data])
+all_assets = load_assets_from_modules(
+    [raw_dataset, clean_data, ols, feature_selection, lasso, setup]
+)
 
 defs = Definitions(
     assets=all_assets,

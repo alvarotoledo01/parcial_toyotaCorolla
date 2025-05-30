@@ -4,5 +4,5 @@ from dagster import AssetIn
 clean_data = define_dagstermill_asset(
     name="clean_data",
     notebook_path="notebooks/clean_data.ipynb",
-    ins={"raw_dataset": AssetIn()},
+    deps=["raw_dataset"],
 )
