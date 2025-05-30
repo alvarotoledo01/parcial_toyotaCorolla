@@ -18,7 +18,7 @@ def boxplot(feature, title="boxplot"):
 def histogram(feature, bins=30, title="histogram"):
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.histplot(feature, bins=bins, kde=True)
-    plt.title(f"Distribution of {title}")
+    plt.title(f"Distribución de {title}")
     plt.xlabel(title)
     plt.ylabel("Frequency")
     plt.show()
