@@ -3,7 +3,7 @@ from dagster import AssetExecutionContext, asset
 import pandas as pd
 
 
-@asset()
+@asset(deps=["setup_mlflow"])
 def raw_dataset(context: AssetExecutionContext) -> str:
     context.log.info("Cargando datos de Toyota Corolla")
 
