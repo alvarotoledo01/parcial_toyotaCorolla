@@ -9,12 +9,15 @@ import numpy as np
 from statsmodels.regression.linear_model import RegressionResultsWrapper
 
 
-@asset(deps=["train_ols"])
+@asset(deps=["train_ols"], required_resource_keys={"mlflow"})
 def ols_residual_analysis(
     context: AssetExecutionContext,
     train_ols: tuple[RegressionResultsWrapper, str],
     select_features: pd.DataFrame,
 ):
+
+    mlflow_resource: mlflow = context.resources.mlflow
+
     df = select_features.copy()
     model = train_ols[0]
     run_id = train_ols[1]
@@ -95,23 +98,25 @@ def ols_residual_analysis(
     plt.savefig(res_vs_lev_path)
     plt.close()
 
-    with mlflow.start_run(run_id=run_id):
+    with mlflow_resource.start_run(run_id=run_id):
         # Logear los gráficos
         context.log.info("Logging residuals plots to MLflow")
-        mlflow.log_artifact(hist_path, "residuals")
-        mlflow.log_artifact(res_vs_fit_path, "residuals")
-        mlflow.log_artifact(qqplot_path, "residuals")
-        mlflow.log_artifact(scale_loc_path, "residuals")
-        mlflow.log_artifact(res_vs_lev_path, "residuals")
+        mlflow_resource.log_artifact(hist_path, "residuals")
+        mlflow_resource.log_artifact(res_vs_fit_path, "residuals")
+        mlflow_resource.log_artifact(qqplot_path, "residuals")
+        mlflow_resource.log_artifact(scale_loc_path, "residuals")
+        mlflow_resource.log_artifact(res_vs_lev_path, "residuals")
         context.log.info("Residuals analysis completed and logged to MLflow")
 
 
-@asset(deps=["train_lasso", "select_features"])
+@asset(deps=["train_lasso", "select_features"], required_resource_keys={"mlflow"})
 def lasso_residual_analysis(
     context: AssetExecutionContext,
     train_lasso: tuple[object, str],
     clean_data,
 ):
+    mlflow_resource: mlflow = context.resources.mlflow
+
     df = pd.read_csv("data/clean_df.csv", encoding="utf8", engine="python")
     model = train_lasso[0]
     run_id = train_lasso[1]
@@ -181,11 +186,11 @@ def lasso_residual_analysis(
     plt.savefig(scale_loc_path)
     plt.close()
 
-    with mlflow.start_run(run_id=run_id):
+    with mlflow_resource.start_run(run_id=run_id):
         # Logear los gráficos
         context.log.info("Logging Lasso residuals plots to MLflow")
-        mlflow.log_artifact(hist_path, "lasso_residuals")
-        mlflow.log_artifact(res_vs_fit_path, "lasso_residuals")
-        mlflow.log_artifact(qqplot_path, "lasso_residuals")
-        mlflow.log_artifact(scale_loc_path, "lasso_residuals")
+        mlflow_resource.log_artifact(hist_path, "lasso_residuals")
+        mlflow_resource.log_artifact(res_vs_fit_path, "lasso_residuals")
+        mlflow_resource.log_artifact(qqplot_path, "lasso_residuals")
+        mlflow_resource.log_artifact(scale_loc_path, "lasso_residuals")
         context.log.info("Lasso residuals analysis completed and logged to MLflow")
