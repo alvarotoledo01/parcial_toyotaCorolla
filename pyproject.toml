@@ -1,21 +1,18 @@
-[project]
+[tool.poetry]
 name = "parcial-toyotacorolla"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Tobías y Álvaro"}
-]
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
-dependencies = [
-    "dagstermill (>=0.26.17,<0.27.0)",
-    "papermill (>=2.6.0,<3.0.0)",
-    "dagster-webserver (>=1.10.18,<2.0.0)",
-    "statsmodels (>=0.14.4,<0.15.0)",
-    "mlflow (>=2.22.0,<3.0.0)",
-    "seaborn (>=0.13.2,<0.14.0)"
-]
+authors = ["Tobías y Álvaro"]
 
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+dagstermill = "^0.26.17"
+papermill = "^2.6.0"
+dagster-webserver = "^1.10.18"
+statsmodels = "^0.14.4"
+mlflow = "^2.22.0"
+seaborn = "^0.13.2"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
