@@ -8,10 +8,11 @@ from dagster_project.assets import (
     raw_dataset,
     clean_data,
     setup,
+    residuals,
 )
 
 all_assets = load_assets_from_modules(
-    [raw_dataset, clean_data, ols, feature_selection, lasso, setup]
+    [raw_dataset, clean_data, ols, feature_selection, lasso, setup, residuals]
 )
 
 defs = Definitions(

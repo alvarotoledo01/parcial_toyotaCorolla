@@ -20,7 +20,7 @@ def train_lasso(context: AssetExecutionContext, clean_data):
     X = df.drop(columns=["Price"])
     y = df["Price"]
 
-    with mlflow.start_run(run_name="lasso_model"):
+    with mlflow.start_run(run_name="lasso_model") as run:
         k = 5
         kf = KFold(n_splits=k, shuffle=True, random_state=42)
         metrics = {
@@ -78,4 +78,4 @@ def train_lasso(context: AssetExecutionContext, clean_data):
         mlflow.log_param("lasso_k_folds", k)
         mlflow.log_param("lasso_coefs", final_model.coef_.tolist())
 
-        return final_model
+        return final_model, run.info.run_id

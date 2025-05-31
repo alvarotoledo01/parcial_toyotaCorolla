@@ -22,7 +22,7 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
     y = df["Price"]
     X = df.drop(columns=["Price"])
 
-    with mlflow.start_run(run_name="ols_model"):
+    with mlflow.start_run(run_name="ols_model") as run:
 
         k = 5
         kf = KFold(n_splits=k, shuffle=True, random_state=42)
@@ -100,4 +100,4 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
 
         context.log.info("OLS model training completed successfully.")
 
-        return final_model
+        return final_model, run.info.run_id
