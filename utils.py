@@ -5,68 +5,132 @@ import seaborn as sns
 from scipy.stats import gaussian_kde, zscore
 from scipy import stats
 import math
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
-def boxplot(feature, title="boxplot"):
+def boxplot_feature(df, feature_name):
+    """
+    Boxplot para una feature numérica.
+    """
+    feature = df[feature_name]
+
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.boxplot(feature, patch_artist=True, boxprops=dict(facecolor="lightblue"))
-    plt.title(f"Boxplot of {title}")
-    plt.xlabel(title)
+    ax.set_title(f"Boxplot de {feature_name}")
+    ax.set_xlabel(feature_name)
+    plt.tight_layout()
     plt.show()
 
 
-def histogram(feature, bins=30, title="histogram"):
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.histplot(feature, bins=bins, kde=True)
-    plt.title(f"Distribución de {title}")
-    plt.xlabel(title)
-    plt.ylabel("Frequency")
-    plt.show()
-
-
-def scatter_plot(feature1, feature2):
-    fig, ax = plt.subplots(figsize=(10, 5))
-    ax.scatter(feature1, feature2)
-    ax.set_xlabel(feature1.name)
-    ax.set_ylabel(feature2.name)
-    plt.show()
-
-
-# limpieza de outliers con z-core
-
-
-def limpiar_outliers_z_core(feature: pd.Series, umbral=2):
-    z_cores = stats.zscore(feature)
-    mask = abs(z_cores) < umbral
-    feature = feature[mask]
-    return feature, mask
-
-
-# limpieza de outliers con IQR
-
-
-def limpiar_outliers_iqr(feature: pd.Series):
+def histogram_feature(df, feature_name, bins=30):
     """
-    Elimina outliers usando el método del IQR.
+    Histograma con KDE para una feature numérica.
+    """
+    feature = df[feature_name]
 
-    Parámetros:
-        feature (pd.Series): feature numérica del DataFrame.
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.histplot(feature, bins=bins, kde=True, ax=ax)
+    ax.set_title(f"Distribución de {feature_name}")
+    ax.set_xlabel(feature_name)
+    ax.set_ylabel("Frecuencia")
+    plt.tight_layout()
+    plt.show()
 
-    Retorna:
-        feature_limpia (pd.Series): Serie con outliers eliminados.
-        mascara (pd.Series): Máscara booleana para aplicar al DataFrame original.
+
+def scatter_feature_vs_target(df, feature_name, target_name="Price"):
+    """
+    Scatter plot de una feature contra una variable objetivo.
+    """
+    feature = df[feature_name]
+    target = df[target_name]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.scatter(feature, target, alpha=0.6)
+    ax.set_xlabel(feature_name)
+    ax.set_ylabel(target_name)
+    ax.set_title(f"{feature_name} vs {target_name}")
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_feature_analysis(df, feature_name, target_name="Price", bins=30):
+    """
+    Figura unificada con boxplot, histograma y scatter plot de una feature contra el target.
+    """
+    feature = df[feature_name]
+    target = df[target_name]
+
+    fig, axs = plt.subplots(1, 3, figsize=(18, 5))
+
+    # Boxplot
+    axs[0].boxplot(feature, patch_artist=True, boxprops=dict(facecolor="lightblue"))
+    axs[0].set_title(f"Boxplot de {feature_name}")
+    axs[0].set_xlabel(feature_name)
+
+    # Histograma con KDE
+    sns.histplot(feature, bins=bins, kde=True, ax=axs[1])
+    axs[1].set_title(f"Distribución de {feature_name}")
+    axs[1].set_xlabel(feature_name)
+    axs[1].set_ylabel("Frecuencia")
+
+    # Scatter plot contra el target
+    axs[2].scatter(feature, target, alpha=0.6)
+    axs[2].set_xlabel(feature_name)
+    axs[2].set_ylabel(target_name)
+    axs[2].set_title(f"{feature_name} vs {target_name}")
+
+    plt.tight_layout()
+    plt.show()
+
+
+def clean_outliers_zscore(feature: pd.Series, threshold: float = 2.0):
+    """
+    Remove outliers from a pandas Series using Z-score method.
+
+    Parameters:
+    - feature: pandas Series with data to clean
+    - threshold: Z-score threshold (default=2.0)
+
+    Returns:
+    - cleaned_feature: Series with outliers removed
+    - mask: Boolean mask identifying non-outlier values
+    """
+    feature_no_na = feature.dropna()
+    z_scores = stats.zscore(feature_no_na)
+    mask = abs(z_scores) < threshold
+
+    # Create full-sized mask matching original feature (including NAs)
+    full_mask = pd.Series(False, index=feature.index)
+    full_mask.loc[feature_no_na.index] = mask
+
+    cleaned_feature = feature[full_mask]
+
+    return cleaned_feature, full_mask
+
+
+def clean_outliers_iqr(feature: pd.Series):
+    """
+    Remove outliers from a pandas Series using IQR method.
+
+    Parameters:
+    - feature: pandas Series with data to clean
+
+    Returns:
+    - cleaned_feature: Series with outliers removed
+    - mask: Boolean mask identifying non-outlier values
     """
     Q1 = feature.quantile(0.25)
     Q3 = feature.quantile(0.75)
     IQR = Q3 - Q1
 
-    limite_inferior = Q1 - 1.5 * IQR
-    limite_superior = Q3 + 1.5 * IQR
+    lower_limit = Q1 - 1.5 * IQR
+    upper_limit = Q3 + 1.5 * IQR
 
-    mascara = (feature >= limite_inferior) & (feature <= limite_superior)
-    feature = feature[mascara]
+    mask = (feature >= lower_limit) & (feature <= upper_limit)
+    cleaned_feature = feature[mask].copy()
 
-    return feature, mascara
+    return cleaned_feature, mask
 
 
 def resumen_outliers(df):
@@ -302,52 +366,60 @@ def bar_por_lotes(df, por_lote=6):
         plt.show()
 
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+
 def show_correlation_matrix(
-    df, method="pearson", show_plot=True, annot=True, figsize=(12, 10)
-):
+    df,
+    method: str = "pearson",
+    show_plot: bool = True,
+    annot: bool = True,
+    figsize: tuple = (12, 10),
+) -> pd.DataFrame:
     """
-    Calculate and optionally display a correlation matrix for a DataFrame.
+    Muestra y devuelve la matriz de correlación entre variables numéricas.
 
-    Parameters:
-    - df: Input DataFrame
-    - method: 'pearson' (default), 'spearman', or 'kendall'
-    - show_plot: If True, displays a heatmap
-    - annot: If True, shows annotation values in the heatmap
-    - figsize: Tuple for figure size (width, height)
+    Parámetros:
+    - df: pandas.DataFrame con los datos.
+    - method: str, tipo de correlación ('pearson', 'spearman', 'kendall').
+    - show_plot: bool, si se muestra el gráfico de heatmap.
+    - annot: bool, si se muestran los valores dentro del heatmap.
+    - figsize: tuple, tamaño del gráfico.
 
-    Returns:
-    - Correlation matrix (DataFrame)
+    Devuelve:
+    - DataFrame con la matriz de correlación.
     """
-    # Select only numeric columns
-    numeric_df = df.select_dtypes(include=["number"])
+    numeric_df = df.select_dtypes(include="number")
+    if numeric_df.empty:
+        raise ValueError("El DataFrame no contiene columnas numéricas.")
 
-    # Calculate correlation matrix
-    corr_matrix = numeric_df.corr(method=method)
+    corr = numeric_df.corr(method=method)
 
     if show_plot:
         plt.figure(figsize=figsize)
-
-        # Adjust font size based on matrix dimensions
-        n_cols = len(corr_matrix.columns)
-        annot_kws = {"size": 7} if n_cols > 10 else {"size": 9}
+        n_cols = len(corr.columns)
+        font_scale = 0.9 if n_cols > 10 else 1.0
+        sns.set(font_scale=font_scale)
 
         sns.heatmap(
-            corr_matrix,
+            corr,
             annot=annot,
             fmt=".2f" if annot else None,
             cmap="coolwarm",
             vmin=-1,
             vmax=1,
             linewidths=0.5,
-            annot_kws=annot_kws,
+            annot_kws={"size": 7} if n_cols > 10 else {"size": 9},
         )
-        plt.title(f"Correlation Matrix - {method.capitalize()}")
+        plt.title(f"Matriz de correlación ({method.capitalize()})", fontsize=14)
         plt.xticks(rotation=45, ha="right")
         plt.yticks(rotation=0)
         plt.tight_layout()
         plt.show()
 
-    return corr_matrix
+    return corr
 
 
 def pares_correlacion_altas(corr_matrix, umbral=0.65):
