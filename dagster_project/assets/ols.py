@@ -10,8 +10,10 @@ import numpy as np
 from dagster_project.assets.config import MODEL_DIR
 
 
-@asset(deps=["select_features"])
+@asset(deps=["select_features"], required_resource_keys={"mlflow"})
 def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
+
+    mlflow_resource: mlflow = context.resources.mlflow
 
     context.log.info("Entrenando modelo OLS")
 
@@ -22,7 +24,7 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
     y = df["Price"]
     X = df.drop(columns=["Price"])
 
-    with mlflow.start_run(run_name="ols_model"):
+    with mlflow_resource.start_run(run_name="ols_model") as run:
 
         k = 5
         kf = KFold(n_splits=k, shuffle=True, random_state=42)
@@ -74,30 +76,30 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
 
         # Loguear métricas promedio
         for key in metrics:
-            mlflow.log_metric(f"{key}", round(float(np.mean(metrics[key])), 3))
+            mlflow_resource.log_metric(f"{key}", round(float(np.mean(metrics[key])), 3))
 
         # Entrenar modelo final con todo el dataset
         X_full = sm.add_constant(X)
         final_model = sm.OLS(y, X_full).fit()
-        mlflow.statsmodels.log_model(final_model, "ols_model")
+        mlflow_resource.statsmodels.log_model(final_model, "ols_model")
 
         # Loguear métricas del modelo final completo
-        mlflow.log_metric("r2", round(final_model.rsquared_adj, 4))
+        mlflow_resource.log_metric("r2", round(final_model.rsquared_adj, 4))
 
         # Log AIC and BIC metrics
-        mlflow.log_metric("aic", round(final_model.aic, 4))
-        mlflow.log_metric("bic", round(final_model.bic, 4))
+        mlflow_resource.log_metric("aic", round(final_model.aic, 4))
+        mlflow_resource.log_metric("bic", round(final_model.bic, 4))
 
         # Guardar resumen
         final_summary_path = os.path.join(MODEL_DIR, "ols_summary.txt")
         with open(final_summary_path, "w") as f:
             f.write(str(final_model.summary()))
-        mlflow.log_artifact(final_summary_path, "model")
+        mlflow_resource.log_artifact(final_summary_path, "model")
 
         # Loguear parámetros
-        mlflow.log_param("ols_k_folds", k)
-        mlflow.log_param("ols_num_features", X.shape[1])
+        mlflow_resource.log_param("ols_k_folds", k)
+        mlflow_resource.log_param("ols_num_features", X.shape[1])
 
         context.log.info("OLS model training completed successfully.")
 
-        return final_model
+        return final_model, run.info.run_id

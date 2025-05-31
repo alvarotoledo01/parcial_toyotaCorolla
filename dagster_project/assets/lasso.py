@@ -8,8 +8,10 @@ from sklearn.model_selection import KFold, train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
 
-@asset(deps=["clean_data"])
+@asset(deps=["clean_data"], required_resource_keys={"mlflow"})
 def train_lasso(context: AssetExecutionContext, clean_data):
+
+    mlflow_resource: mlflow = context.resources.mlflow
 
     context.log.info("Entrenando modelo Lasso")
 
@@ -20,7 +22,7 @@ def train_lasso(context: AssetExecutionContext, clean_data):
     X = df.drop(columns=["Price"])
     y = df["Price"]
 
-    with mlflow.start_run(run_name="lasso_model"):
+    with mlflow_resource.start_run(run_name="lasso_model") as run:
         k = 5
         kf = KFold(n_splits=k, shuffle=True, random_state=42)
         metrics = {
@@ -65,17 +67,17 @@ def train_lasso(context: AssetExecutionContext, clean_data):
 
         for metric, values in metrics.items():
             mean_value = np.mean(values)
-            mlflow.log_metric(metric, mean_value)
+            mlflow_resource.log_metric(metric, mean_value)
             context.log.info(f"{metric}: {mean_value}")
 
         final_model = LassoCV(cv=5, random_state=42)
         final_model.fit(X, y)
-        mlflow.sklearn.log_model(final_model, "lasso_model")
+        mlflow_resource.sklearn.log_model(final_model, "lasso_model")
 
-        mlflow.log_param("alpha", final_model.alpha_)
-        mlflow.log_metric("r2", final_model.score(X, y))
+        mlflow_resource.log_param("alpha", final_model.alpha_)
+        mlflow_resource.log_metric("r2", final_model.score(X, y))
 
-        mlflow.log_param("lasso_k_folds", k)
-        mlflow.log_param("lasso_coefs", final_model.coef_.tolist())
+        mlflow_resource.log_param("lasso_k_folds", k)
+        mlflow_resource.log_param("lasso_coefs", final_model.coef_.tolist())
 
-        return final_model
+        return final_model, run.info.run_id
