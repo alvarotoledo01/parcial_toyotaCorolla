@@ -20,7 +20,7 @@ pip install poetry                      # se instala sólo dentro del env
 poetry install --no-root                # baja EXACTAMENTE lo del lock
 
 # 3️⃣  Variables de entorno (Dagster & MLflow)
-echo "MLFLOW_TRACKING_URI=https://8270-186-122-11-149.ngrok-free.app/
+echo "MLFLOW_TRACKING_URI=https://76c0-186-122-11-149.ngrok-free.app
 MLFLOW_EXPERIMENT_NAME=toyota_parcial" > .env
 
 # 4️⃣  ¡Despega!
