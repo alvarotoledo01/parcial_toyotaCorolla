@@ -337,6 +337,47 @@ def clean_outliers_iqr(feature: pd.Series):
     return cleaned_feature, mask
 
 
+def boxcox_transform(feature: pd.Series, return_lambda=False):
+    """
+    Apply Box-Cox transformation to a pandas Series.
+
+    Parameters:
+    - feature: pandas Series with positive values to transform
+    - return_lambda: if True, returns the lambda parameter used in transformation
+
+    Returns:
+    - transformed_feature: Box-Cox transformed Series
+    - lambda_param: (optional) lambda parameter used in transformation
+
+    Note: Box-Cox requires strictly positive data. Zero or negative values will
+    be automatically filtered out and replaced with NaN in the result.
+    """
+    # Filter out non-positive values
+    valid_mask = feature > 0
+
+    if valid_mask.sum() == 0:
+        raise ValueError(
+            "No positive values found. Box-Cox requires strictly positive data."
+        )
+
+    # Apply Box-Cox transformation
+    transformed_values, lambda_param = stats.boxcox(feature[valid_mask])
+
+    # Create result Series with same index as original
+    transformed_feature = pd.Series(index=feature.index, dtype=float)
+    transformed_feature[valid_mask] = transformed_values
+
+    # Print information about eliminated values
+    n_invalid = (~valid_mask).sum()
+    if n_invalid > 0:
+        print(f"Warning: {n_invalid} non-positive values were set to NaN")
+
+    if return_lambda:
+        return transformed_feature, lambda_param
+    else:
+        return transformed_feature
+
+
 def resumen_outliers(df):
 
     # Filtrar solo columnas numéricas

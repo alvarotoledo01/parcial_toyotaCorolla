@@ -59,7 +59,7 @@ def train_lasso(context: AssetExecutionContext, clean_data):
         mlflow_resource.log_param("best_alpha", best_alpha)
 
         # Generar gráfico de regularización
-        alphas_to_try = np.logspace(-6, 3, 100)
+        alphas_to_try = np.logspace(-1, 2, 100)
         coefs = []
 
         for alpha in alphas_to_try:
