@@ -27,7 +27,7 @@ def train_lasso(context: AssetExecutionContext, clean_data):
 
     with mlflow_resource.start_run(run_name="lasso_model") as run:
         # Entrenar LassoCV para encontrar el mejor alpha
-        lasso_cv = LassoCV(cv=5, random_state=42)
+        lasso_cv = LassoCV(cv=5, random_state=42, alphas=np.logspace(-6, 3, 100))
         lasso_cv.fit(X_train, y_train)
         best_alpha = lasso_cv.alpha_
 
@@ -59,7 +59,7 @@ def train_lasso(context: AssetExecutionContext, clean_data):
         mlflow_resource.log_param("best_alpha", best_alpha)
 
         # Generar gráfico de regularización
-        alphas_to_try = np.logspace(1, 2, 100)
+        alphas_to_try = np.logspace(-6, 3, 100)
         coefs = []
 
         for alpha in alphas_to_try:
