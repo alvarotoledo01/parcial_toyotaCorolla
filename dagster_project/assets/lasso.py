@@ -41,15 +41,25 @@ def train_lasso(context: AssetExecutionContext, clean_data):
         rmse_train = np.sqrt(mean_squared_error(y_train, y_train_pred))
         rmse_test = np.sqrt(mean_squared_error(y_test, y_test_pred))
 
+        # Calcular métricas adicionales
+        mae_train = np.mean(np.abs(y_train - y_train_pred))
+        mae_test = np.mean(np.abs(y_test - y_test_pred))
+        mse_train = mean_squared_error(y_train, y_train_pred)
+        mse_test = mean_squared_error(y_test, y_test_pred)
+
         # Loguear métricas
         mlflow_resource.log_metric("r2_train", r2_train)
         mlflow_resource.log_metric("r2_test", r2_test)
         mlflow_resource.log_metric("rmse_train", rmse_train)
         mlflow_resource.log_metric("rmse_test", rmse_test)
+        mlflow_resource.log_metric("mae_train", mae_train)
+        mlflow_resource.log_metric("mae_test", mae_test)
+        mlflow_resource.log_metric("mse_train", mse_train)
+        mlflow_resource.log_metric("mse_test", mse_test)
         mlflow_resource.log_param("best_alpha", best_alpha)
 
         # Generar gráfico de regularización
-        alphas_to_try = np.logspace(-6, 2, 100)
+        alphas_to_try = np.logspace(1, 2, 100)
         coefs = []
 
         for alpha in alphas_to_try:
@@ -95,7 +105,11 @@ def train_lasso(context: AssetExecutionContext, clean_data):
         # Entrenar modelo final en todos los datos
         final_model = Lasso(alpha=best_alpha)
         final_model.fit(X, y)
-        mlflow_resource.sklearn.log_model(final_model, "lasso_model")
+
+        # Calcular y loguear R2 del modelo final
+        final_predictions = final_model.predict(X)
+        final_r2 = r2_score(y, final_predictions)
+        mlflow_resource.log_metric("r2", final_r2)
 
         # Loguear coeficientes no nulos
         non_zero_coefs = {
@@ -105,5 +119,15 @@ def train_lasso(context: AssetExecutionContext, clean_data):
         }
         context.log.info(f"Coeficientes no nulos: {non_zero_coefs}")
         mlflow_resource.log_param("non_zero_coefficients", non_zero_coefs)
+        # Log non-zero coefficients as a text file artifact
+        coefs_file = "non_zero_coefficients.txt"
+        with open(coefs_file, "w") as f:
+            f.write("Non-zero coefficients in Lasso model:\n\n")
+            for feature, coef in sorted(
+                non_zero_coefs.items(), key=lambda x: abs(x[1]), reverse=True
+            ):
+                f.write(f"{feature}: {coef:.6f}\n")
+        mlflow_resource.log_artifact(coefs_file)
+        os.remove(coefs_file)
 
         return final_model, run.info.run_id

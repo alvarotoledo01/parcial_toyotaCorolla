@@ -81,7 +81,6 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
         # Entrenar modelo final con todo el dataset
         X_full = sm.add_constant(X)
         final_model = sm.OLS(y, X_full).fit()
-        mlflow_resource.statsmodels.log_model(final_model, "ols_model")
 
         # Loguear métricas del modelo final completo
         mlflow_resource.log_metric("r2", round(final_model.rsquared_adj, 4))
