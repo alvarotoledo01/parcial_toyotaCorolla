@@ -17,6 +17,7 @@ def select_features(context: AssetExecutionContext):
         "Sport_Model",
         "Metallic_Rim",
         "Boardcomputer",
+        # "Automatic_airco",
     ]
 
     df = df.drop(columns=remove_features, errors="ignore")
