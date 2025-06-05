@@ -53,6 +53,30 @@ def scatter_feature_vs_target(df, feature_name, target_name="Price"):
     plt.tight_layout()
     plt.show()
 
+    def barplot_feature(df, feature_name):
+        counts = df[feature_name].value_counts().sort_values(ascending=False)
+
+        # Determine if we need to limit the number of categories shown
+        max_categories = 20  # Maximum number of categories to display
+        if len(counts) > max_categories:
+            other_count = counts.iloc[max_categories:].sum()
+            counts = counts.iloc[:max_categories]
+            counts["Other"] = other_count
+
+        fig, ax = plt.subplots(figsize=(10, 6))
+        counts.plot(kind="bar", ax=ax, color="skyblue", edgecolor="black")
+
+        # Add value labels on top of each bar
+        for i, v in enumerate(counts):
+            ax.text(i, v + 0.1, str(v), ha="center", fontweight="bold")
+
+        ax.set_title(f"Distribution of {feature_name}")
+        ax.set_xlabel(feature_name)
+        ax.set_ylabel("Count")
+        plt.xticks(rotation=45, ha="right")
+        plt.tight_layout()
+        plt.show()
+
 
 def plot_feature_analysis(df, feature_name, target_name="Price", bins=30):
     """
