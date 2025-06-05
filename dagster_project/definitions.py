@@ -9,12 +9,11 @@ from dagster_project.assets import (
     ols,
     raw_dataset,
     clean_data,
-    setup,
     residuals,
 )
 
 all_assets = load_assets_from_modules(
-    [raw_dataset, clean_data, ols, feature_selection, lasso, setup, residuals]
+    [raw_dataset, clean_data, ols, feature_selection, lasso, residuals]
 )
 
 mlflow_tracking_uri = os.environ.get("MLFLOW_TRACKING_URI")
