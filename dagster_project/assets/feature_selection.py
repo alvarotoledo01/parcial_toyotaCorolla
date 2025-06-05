@@ -6,19 +6,18 @@ import pandas as pd
 def select_features(context: AssetExecutionContext):
     df = pd.read_csv("data/clean_df.csv", encoding="utf8", engine="python")
 
-    remove_features = [
+    keep_features = [
         "cc",
-        "Quarterly_Tax",
-        "Gears",
-        "Doors",
-        "Met_Color",
-        "Automatic",
-        "BOVAG_Guarantee",
-        "Guarantee_Period",
-        "Sport_Model",
-        "Metallic_Rim",
+        "KM_Sqrt",
+        "Age_08_04",
+        "Boardcomputer",
+        "Airco",
+        "Powered_Windows",
+        "HP",
+        "High_Tax",
+        "Weight",
     ]
 
-    df = df.drop(columns=remove_features)
+    df = df[keep_features + ["Price"]]
 
     return df
