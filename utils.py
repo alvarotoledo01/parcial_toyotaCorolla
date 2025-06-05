@@ -38,7 +38,211 @@ def histogram_feature(df, feature_name, bins=30):
     plt.show()
 
 
-def scatter_feature_vs_target(df, feature_name, target_name="Price"):
+def barplot_feature(df, feature_name):
+    counts = df[feature_name].value_counts().sort_values(ascending=False)
+
+    # Determine if we need to limit the number of categories shown
+    max_categories = 20  # Maximum number of categories to display
+    if len(counts) > max_categories:
+        other_count = counts.iloc[max_categories:].sum()
+        counts = counts.iloc[:max_categories]
+        counts["Other"] = other_count
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    counts.plot(kind="bar", ax=ax, color="skyblue", edgecolor="black")
+
+    # Add value labels on top of each bar
+    for i, v in enumerate(counts):
+        ax.text(i, v + 0.1, str(v), ha="center", fontweight="bold")
+
+    ax.set_title(f"Distribution of {feature_name}")
+    ax.set_xlabel(feature_name)
+    ax.set_ylabel("Count")
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.show()
+
+
+def barplot_features_batch(
+    df, feature_names, max_categories=20, batch_size=6, figsize=(15, 12)
+):
+
+    # Process features in batches
+    for start_idx in range(0, len(feature_names), batch_size):
+        end_idx = min(start_idx + batch_size, len(feature_names))
+        batch_features = feature_names[start_idx:end_idx]
+
+        # Calculate grid layout
+        n_plots = len(batch_features)
+        n_cols = min(3, n_plots)
+        n_rows = (n_plots + n_cols - 1) // n_cols  # Ceiling division
+
+        # Create figure and axes
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=figsize)
+        if n_plots == 1:
+            axes = np.array([axes])
+        axes = axes.flatten()
+
+        # Create plots
+        for i, feature_name in enumerate(batch_features):
+            if feature_name not in df.columns:
+                axes[i].text(
+                    0.5,
+                    0.5,
+                    f"Column '{feature_name}' not found",
+                    ha="center",
+                    va="center",
+                    color="red",
+                )
+                continue
+
+            counts = df[feature_name].value_counts().sort_values(ascending=False)
+
+            # Handle too many categories
+            if len(counts) > max_categories:
+                other_count = counts.iloc[max_categories:].sum()
+                counts = counts.iloc[:max_categories].copy()
+                counts["Other"] = other_count
+
+            # Create bar plot
+            counts.plot(kind="bar", ax=axes[i], color="skyblue", edgecolor="black")
+
+            # Add value labels on top of each bar
+            for j, v in enumerate(counts):
+                axes[i].text(j, v + 0.1, str(v), ha="center", fontweight="bold")
+
+            # Set titles and labels
+            axes[i].set_title(f"Distribution of {feature_name}")
+            axes[i].set_xlabel(feature_name)
+            axes[i].set_ylabel("Count")
+            axes[i].tick_params(axis="x", rotation=45, labelsize=8)
+
+        # Remove unused subplots
+        for j in range(n_plots, len(axes)):
+            fig.delaxes(axes[j])
+
+        plt.tight_layout()
+        plt.show()
+
+
+def violinplot_feature(df, feature_name, target_name="Price"):
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    # Check if target is continuous, if so, discretize it
+    if df[target_name].nunique() > 10:
+        # Create categorical bins from continuous target
+        df["target_bins"] = pd.qcut(
+            df[target_name], 5, labels=[f"Q{i+1}" for i in range(5)]
+        )
+        sns.violinplot(
+            x="target_bins", y=feature_name, data=df, ax=ax, inner="quartile"
+        )
+        ax.set_title(f"Distribution of {feature_name} by {target_name} (Quintiles)")
+    else:
+        # Use categorical target as is
+        sns.violinplot(x=target_name, y=feature_name, data=df, ax=ax, inner="quartile")
+        ax.set_title(f"Distribution of {feature_name} by {target_name}")
+
+    ax.set_xlabel(target_name)
+    ax.set_ylabel(feature_name)
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.show()
+
+
+def violinplot_features_batch(
+    df, feature_names, target_name="Price", batch_size=4, figsize=(18, 12)
+):
+
+    # Check if target exists
+    if target_name not in df.columns:
+        raise ValueError(f"Target column '{target_name}' not found in DataFrame")
+
+    # Create a temporary dataframe with binned target if needed
+    temp_df = df.copy()
+    target_is_continuous = temp_df[target_name].nunique() > 10
+
+    if target_is_continuous:
+        # Create categorical bins from continuous target
+        temp_df["target_bins"] = pd.qcut(
+            temp_df[target_name], 5, labels=[f"Q{i+1}" for i in range(5)]
+        )
+        target_col = "target_bins"
+    else:
+        target_col = target_name
+
+    # Process features in batches
+    for start_idx in range(0, len(feature_names), batch_size):
+        end_idx = min(start_idx + batch_size, len(feature_names))
+        batch_features = feature_names[start_idx:end_idx]
+
+        # Calculate grid layout
+        n_plots = len(batch_features)
+        n_cols = min(2, n_plots)
+        n_rows = (n_plots + n_cols - 1) // n_cols  # Ceiling division
+
+        # Create figure and axes
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=figsize)
+        if n_plots == 1:
+            axes = np.array([axes])
+        axes = axes.flatten()
+
+        # Create plots
+        for i, feature_name in enumerate(batch_features):
+            if feature_name not in df.columns:
+                axes[i].text(
+                    0.5,
+                    0.5,
+                    f"Column '{feature_name}' not found",
+                    ha="center",
+                    va="center",
+                    color="red",
+                )
+                continue
+
+            try:
+                # Create violin plot
+                sns.violinplot(
+                    x=target_col,
+                    y=feature_name,
+                    data=temp_df,
+                    ax=axes[i],
+                    inner="quartile",
+                )
+
+                # Set titles and labels
+                if target_is_continuous:
+                    axes[i].set_title(
+                        f"Distribution of {feature_name} by {target_name} (Quintiles)"
+                    )
+                else:
+                    axes[i].set_title(
+                        f"Distribution of {feature_name} by {target_name}"
+                    )
+
+                axes[i].set_xlabel(target_name)
+                axes[i].set_ylabel(feature_name)
+                axes[i].tick_params(axis="x", rotation=45)
+
+            except Exception as e:
+                axes[i].text(
+                    0.5, 0.5, f"Error: {str(e)}", ha="center", va="center", color="red"
+                )
+                axes[i].set_title(f"Failed: {feature_name}")
+
+        # Remove unused subplots
+        for j in range(n_plots, len(axes)):
+            fig.delaxes(axes[j])
+
+        plt.tight_layout()
+        plt.show()
+
+        # Clean up temporary column if created
+        if target_is_continuous and "target_bins" in temp_df.columns:
+            del temp_df["target_bins"]
+
+
+def scatter_feature(df, feature_name, target_name="Price"):
     """
     Scatter plot de una feature contra una variable objetivo.
     """
@@ -52,30 +256,6 @@ def scatter_feature_vs_target(df, feature_name, target_name="Price"):
     ax.set_title(f"{feature_name} vs {target_name}")
     plt.tight_layout()
     plt.show()
-
-    def barplot_feature(df, feature_name):
-        counts = df[feature_name].value_counts().sort_values(ascending=False)
-
-        # Determine if we need to limit the number of categories shown
-        max_categories = 20  # Maximum number of categories to display
-        if len(counts) > max_categories:
-            other_count = counts.iloc[max_categories:].sum()
-            counts = counts.iloc[:max_categories]
-            counts["Other"] = other_count
-
-        fig, ax = plt.subplots(figsize=(10, 6))
-        counts.plot(kind="bar", ax=ax, color="skyblue", edgecolor="black")
-
-        # Add value labels on top of each bar
-        for i, v in enumerate(counts):
-            ax.text(i, v + 0.1, str(v), ha="center", fontweight="bold")
-
-        ax.set_title(f"Distribution of {feature_name}")
-        ax.set_xlabel(feature_name)
-        ax.set_ylabel("Count")
-        plt.xticks(rotation=45, ha="right")
-        plt.tight_layout()
-        plt.show()
 
 
 def plot_feature_analysis(df, feature_name, target_name="Price", bins=30):

@@ -5,4 +5,5 @@ clean_data = define_dagstermill_asset(
     name="clean_data",
     notebook_path="clean_data.ipynb",
     deps=["raw_dataset"],
+    group_name="eda_cleaning",
 )

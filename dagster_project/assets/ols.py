@@ -10,7 +10,11 @@ import numpy as np
 from dagster_project.assets.config import MODEL_DIR
 
 
-@asset(deps=["select_features"], required_resource_keys={"mlflow"})
+@asset(
+    deps=["select_features"],
+    required_resource_keys={"mlflow"},
+    group_name="ols",
+)
 def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
 
     mlflow_resource: mlflow = context.resources.mlflow
@@ -61,6 +65,8 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
                 np.sqrt(np.mean((y_train - y_train_pred) ** 2))
             )
             metrics["mae_train"].append(np.mean(np.abs(y_train - y_train_pred)))
+            metrics["mse_train"].append(np.mean((y_train - y_train_pred) ** 2))
+            metrics["mse_test"].append(np.mean((y_test - y_test_pred) ** 2))
 
             # R² test
             ss_res = np.sum((y_test - y_test_pred) ** 2)
@@ -101,4 +107,4 @@ def train_ols(context: AssetExecutionContext, select_features: pd.DataFrame):
 
         context.log.info("OLS model training completed successfully.")
 
-        return final_model, run.info.run_id
+        return final_model, run.info.run_id, df

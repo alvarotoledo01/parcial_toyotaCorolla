@@ -9,18 +9,17 @@ import numpy as np
 from statsmodels.regression.linear_model import RegressionResultsWrapper
 
 
-@asset(deps=["train_ols"], required_resource_keys={"mlflow"})
+@asset(deps=["train_ols"], required_resource_keys={"mlflow"}, group_name="ols")
 def ols_residual_analysis(
     context: AssetExecutionContext,
-    train_ols: tuple[RegressionResultsWrapper, str],
-    select_features: pd.DataFrame,
+    train_ols: tuple[RegressionResultsWrapper, str, pd.DataFrame],
 ):
 
     mlflow_resource: mlflow = context.resources.mlflow
 
-    df = select_features.copy()
     model = train_ols[0]
     run_id = train_ols[1]
+    df = train_ols[2]
 
     # separar variables
     y = df["Price"]
@@ -109,11 +108,14 @@ def ols_residual_analysis(
         context.log.info("Residuals analysis completed and logged to MLflow")
 
 
-@asset(deps=["train_lasso", "select_features"], required_resource_keys={"mlflow"})
+@asset(
+    deps=["train_lasso"],
+    required_resource_keys={"mlflow"},
+    group_name="lasso",
+)
 def lasso_residual_analysis(
     context: AssetExecutionContext,
     train_lasso: tuple[object, str],
-    clean_data,
 ):
     mlflow_resource: mlflow = context.resources.mlflow
 

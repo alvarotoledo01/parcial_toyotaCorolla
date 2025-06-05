@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
 
-@asset(deps=["clean_data"], required_resource_keys={"mlflow"})
+@asset(deps=["clean_data"], required_resource_keys={"mlflow"}, group_name="lasso")
 def train_lasso(context: AssetExecutionContext, clean_data):
     mlflow_resource: mlflow = context.resources.mlflow
     context.log.info("Entrenando modelo Lasso")
